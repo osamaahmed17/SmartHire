@@ -3,22 +3,19 @@ const config = require('../config/config.js')
 
 
 
-let connectionDb = config.dbString
-
-
 const connectDb = async () => {
-    try {
-        const conn = await mongoose.connect(connectionDb, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-            useCreateIndex: true,
-        })
-        console.log("MongoDB connected")
-    } catch (err) {
-        console.log(`Error: ${err.message}`.red)
-        process.exit(1)
-    }
+  try {
+    const conn = await mongoose.connect(config.dbConnection, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useCreateIndex: true,
+    })
+    console.log("MongoDB connected")
+  } catch (err) {
+    console.log(`Error: ${err.message}`.red)
+    process.exit(1)
+  }
 }
 
-module.exports = connectDb;
+module.exports= connectDb;
 
