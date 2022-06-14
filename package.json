@@ -1,0 +1,24 @@
+{
+    "name": "server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js"
+    },
+    "proxy": "localhost:3000",
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/cli": "^7.14.3",
+        "@babel/core": "^7.14.3",
+        "@babel/node": "^7.14.2",
+        "@babel/polyfill": "^7.0.0",
+        "@babel/preset-env": "^7.14.4"
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "mongoose": "^6.3.8"
+    }
+}
