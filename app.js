@@ -3,7 +3,7 @@ const connectDb = require("./config/db.js")
 const express = require("express")
 const compression = require("compression");
 const dotenv = require("dotenv")
-//const routes = require("./route/routes")
+const routes = require("./route/route")
 
 
 
@@ -40,6 +40,8 @@ app.use((req, res, next) => {
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`)
 })
+
+routes(app)
 
 module.exports = app
 
