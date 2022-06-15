@@ -23,7 +23,6 @@ class experienceController {
             experience: req.body.experience,
             interviewDate: new Date()
         }
-
         experienceModel.findOne({"email":req.body.email}, function (error, present) {
             if (error) {
                 responseClass.errorResponse.error = error
