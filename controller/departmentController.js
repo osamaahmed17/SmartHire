@@ -18,7 +18,7 @@ class departmentController {
             data: "",
         }
         this.errorResponse = {
-            success: true,
+            success: false,
             error: "",
         };
 
@@ -26,7 +26,7 @@ class departmentController {
     async createDepartment(req, res) {
         const responseClass = new departmentController();
 
-        let departObject = {
+        let departmentObject = {
             name: req.body.name,
             placement: req.body.placement,
             factory: req.body.factory,
@@ -34,7 +34,7 @@ class departmentController {
             date: new Date()
         }
 
-        departmentModel.create(departObject, function (error, result) {
+        departmentModel.create(departmentObject, function (error, result) {
             if (error) {
                 responseClass.errorResponse.error = error
                 return res.status(500).send(responseClass.errorResponse)
