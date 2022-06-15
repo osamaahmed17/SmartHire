@@ -4,11 +4,13 @@
     "description": "",
     "main": "app.js",
     "scripts": {
-        "start-client": "cd frontend && react-scripts start",
-        "build": "(cd frontend &&react-scripts build) && npm install",
-        "test": "cd frontend && react-scripts test",
-        "eject": "react-scripts eject",
-        "start": "nodemon app.js"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "npm install && (cd frontend && npm run build)",
+        "install-frontend": "cd frontend && npm install",
+        "heroku-postbuild": "npm run install-frontend && npm run build",
+        "start": "nodemon app.js",
+        "frontend": "cd frontend && npm start",
+        "dev": "concurrently \"npm run app\" \"npm run frontend"
     },
     "proxy": "localhost:3000",
     "keywords": [],
@@ -38,6 +40,7 @@
         "nodemailer": "^6.7.5",
         "nodemon": "^2.0.16",
         "otp-generator": "^4.0.0",
+        "react-scripts": "^5.0.1",
         "spelling-corrector": "^3.0.0",
         "stopword": "^2.0.2"
     }
