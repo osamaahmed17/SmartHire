@@ -15,12 +15,12 @@ https://www.getpostman.com/collections/ad52afab7b3be9946b78
 npm install
 ```
 
-### Add env file with Zohomail credentials
+### Add .env file with Zohomail credentials
 Make sure that you add .env file with username and password from Zohomail while following this [link](https://www.finetricks.com/send-email-with-zoho-and-nodemailer-in-node-js/)
 
 
 ### To run the application on localhost
-Make sure that the packages are installed before running the application on localhost.
+Make sure that the packages are installed and .env file configured before running the application on localhost.
 ```sh
 npm start
 ```
