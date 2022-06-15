@@ -1,5 +1,6 @@
 const departmentController = require('../controller/departmentController');
 const experienceController =  require('../controller/experienceController');
+const loginController = require('../controller/loginController')
 
 module.exports = (app) => {
     app.post(`/rest/api/v1/department` , departmentController.createDepartment);
@@ -12,7 +13,8 @@ module.exports = (app) => {
     app.post(`/rest/api/v1/experience` , experienceController.createExperience);
     app.get(`/rest/api/v1/experience` , experienceController.findExperience);
 
-
+    app.post(`/rest/api/v1/createadmin` , loginController.createAmin);
+    app.post(`/rest/api/v1/login` , loginController.loginUser);
 
 
 };

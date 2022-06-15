@@ -3,6 +3,8 @@ const connectDb = require("./config/db.js")
 const express = require("express")
 const compression = require("compression");
 const dotenv = require("dotenv")
+const session = require('express-session');
+
 const routes = require("./route/route")
 
 
@@ -16,6 +18,11 @@ dotenv.config();
 const app = express()
 app.use(express.json());
 app.use(compression());
+app.use(session({
+  secret: 'FuAa3uH_nbFnBk5QxR@=',
+  saveUninitialized: true,
+  resave: true
+}));
 const PORT = process.env.PORT || 3000
 app.use(express.json())
 const corsOptions = {
