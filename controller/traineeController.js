@@ -1,5 +1,7 @@
 const traineeModel = require('../model/traineeModel');
+const bcryptjs = require('bcryptjs');
 
+var sessStore;
 
 class traineeController {
     constructor() {
@@ -22,12 +24,11 @@ class traineeController {
         const responseClass = new traineeController();
 
         const hashpassword = bcryptjs.hashSync(req.body.password, 10);
-        const string = "abcdefghijklmnopqrstuvwxyz";
 
         let traineeObject = {
             name: req.body.name,
             email: req.body.email,
-            traineeID: string[Math.floor(Math.random() * string.length)],
+            traineeID: Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 10),
             department: req.body.department,
             contactNumber: req.body.contactNumber,
             password: hashpassword,
@@ -38,7 +39,8 @@ class traineeController {
                 responseClass.errorResponse.error = error
                 return res.status(500).send(responseClass.errorResponse)
             }
-            responseClass.response.data = result
+            delete traineeObject.password
+            responseClass.response.data = traineeObject
             return res.status(200).send(responseClass.response)
         })
     }
@@ -55,7 +57,7 @@ class traineeController {
                 return res.status(500).send(responseClass.errorResponse)
             }
             else {
-                bcryptjs.compare(req.body.password, student.trainee, function (error, isMatch) {
+                bcryptjs.compare(req.body.password, trainee.password, function (error, isMatch) {
                     if (error) {
                         responseClass.errorResponse.error = error
                         return res.status(500).send(responseClass.errorResponse)
@@ -66,6 +68,8 @@ class traineeController {
                         return res.status(500).send(responseClass.errorResponse)
 
                     } else {
+                        sessStore = req.session;
+                        sessStore.email = req.body.email;
                         responseClass.response.data = "Login Successfully"
                         return res.status(200).send(responseClass.response)
                     }
@@ -77,6 +81,7 @@ class traineeController {
     async traineeForgetPassword(req, res) {
         const responseClass = new traineeController();
         const hashpassword = bcryptjs.hashSync(req.body.password, 10);
+
         traineeModel.findOneAndUpdate({ 'email': req.body.email }, { 'password': hashpassword }, function (error, result) {
             if (error) {
                 responseClass.errorResponse.error = error
@@ -99,29 +104,35 @@ class traineeController {
         let traineeUpdatedObject = {
             name: req.body.name,
             email: req.body.email,
-            traineeID: string[Math.floor(Math.random() * string.length)],
+            traineeID: req.body.traineeID,
             department: req.body.department,
             contactNumber: req.body.contactNumber,
         }
-        traineeModel.findOneAndUpdate({ 'email': req.body.email }, traineeUpdatedObject, function (err, result) {
-            if (error) {
-                responseClass.errorResponse.error = error
-                return res.status(500).send(responseClass.errorResponse)
-            }
-            if (result) {
-                traineeModel.findOne({ 'email': req.body.email }, function (error, trainee) {
-                    if (error) {
-                        responseClass.errorResponse.error = error
-                        return res.status(500).send(responseClass.errorResponse)
-                    }
-
-                    if (trainee) {
-                        responseClass.response.data = "Profile Updated Successfully"
-                        return res.status(200).send(responseClass.response)
-                    }
-                })
-            }
-        })
+        if (sessStore != undefined) {
+            traineeModel.findOneAndUpdate({ 'email': sessStore.email }, traineeUpdatedObject, function (error, result) {
+                if (error) {
+                    responseClass.errorResponse.error = error
+                    return res.status(500).send(responseClass.errorResponse)
+                }
+                if (result) {
+                    traineeModel.findOne({ 'email': req.body.email }, function (error, trainee) {
+                        if (error) {
+                            responseClass.errorResponse.error = error
+                            return res.status(500).send(responseClass.errorResponse)
+                        }
+    
+                        if (trainee) {
+                            responseClass.response.data = "Profile Updated Successfully"
+                            return res.status(200).send(responseClass.response)
+                        }
+                    })
+                }
+            })
+        }
+        else {
+            responseClass.errorResponse.data = "User has been logged out"
+            return res.status(500).send(responseClass.response)
+        }
 
     }
 }
