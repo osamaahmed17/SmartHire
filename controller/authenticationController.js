@@ -4,20 +4,21 @@ const otpGenerator = require('otp-generator');
 
 const sendOTP = function (email, response) {
     const nodemailer = require('nodemailer');
+    console.log(process.env.user)
     var transporter = nodemailer.createTransport({
         host: "smtp.zoho.com",
         secure: true,
         port: 465,
         auth: {
-            user: 'osamaahmedtahir17@zohomail.com',
-            pass: 'eiZCFGy4Rb7D'
+            user: process.env.user,
+            pass: process.env.pass
         }
     });
     
     var otp = otpGenerator.generate(6, { alphabets: false, specialChars: false, upperCase: false });
     console.log(otp + " " + email);
     let body = {
-        from: 'osamaahmedtahir17@zohomail.com',
+        from:  process.env.user,
         to: email,
         subject: 'One Time Password from SmartHire',
         html: `<h2>Hello your OTP for email verification is <span style='background:yellow'> ${otp} <span></h2> 
