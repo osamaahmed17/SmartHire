@@ -10,15 +10,15 @@ const sendOTP = function (email, response) {
         secure: true,
         port: 465,
         auth: {
-            user: process.env.user,
-            pass: process.env.pass
+            user: process.env.username,
+            pass: process.env.password
         }
     });
     
     var otp = otpGenerator.generate(6, { alphabets: false, specialChars: false, upperCase: false });
     console.log(otp + " " + email);
     let body = {
-        from:  process.env.user,
+        from:  process.env.username,
         to: email,
         subject: 'One Time Password from SmartHire',
         html: `<h2>Hello your OTP for email verification is <span style='background:yellow'> ${otp} <span></h2> 
