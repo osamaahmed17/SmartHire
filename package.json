@@ -4,6 +4,10 @@
     "description": "",
     "main": "app.js",
     "scripts": {
+        "start-client": "cd frontend && react-scripts start",
+        "build": "(cd frontend &&react-scripts build) && npm install",
+        "test": "cd frontend && react-scripts test",
+        "eject": "react-scripts eject",
         "start": "nodemon app.js"
     },
     "proxy": "localhost:3000",
