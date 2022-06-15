@@ -2,6 +2,7 @@ const departmentController = require('../controller/departmentController');
 const experienceController = require('../controller/experienceController');
 const loginController = require('../controller/loginController')
 const traineeController = require('../controller/traineeController')
+const authenticationController = require('../controller/authenticationController')
 
 module.exports = (app) => {
     app.post(`/rest/api/v1/department`, departmentController.createDepartment);
@@ -27,9 +28,6 @@ module.exports = (app) => {
     app.put(`/rest/api/v1/traineeforgetpassword`, traineeController.traineeForgetPassword)
     app.put(`/rest/api/v1/updateprofile`, traineeController.updateProfile)
 
-
-
-
-
+    app.post(`/rest/api/v1/verifyemail`, authenticationController.verifyEmail)
 
 };
