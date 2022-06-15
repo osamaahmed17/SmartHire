@@ -22,6 +22,10 @@ let schema = new Schema({
     experience: {
         type: String,
         require: true
+    },
+    sentimentAnalysis: {
+        type: Number,
+        require: true
     }
 
 });
