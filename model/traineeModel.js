@@ -2,6 +2,10 @@ const mongoose = require("mongoose")
 const { Schema } = require('mongoose')
 
 let schema = new Schema({
+    traineeID: {
+        type: String,
+        require: true
+    },
     name: {
         type: String,
         require: true
