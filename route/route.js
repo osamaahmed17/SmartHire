@@ -15,6 +15,12 @@ module.exports = (app) => {
 
     app.post(`/rest/api/v1/createadmin` , loginController.createAmin);
     app.post(`/rest/api/v1/login` , loginController.loginUser);
+    app.get(`/rest/api/v1/getuser`,loginController.getUser)
+    app.get(`/rest/api/v1/logout`,loginController.logoutUser)
+    app.put(`/rest/api/v1/changepassword`,loginController.changePassword)
+    app.get(`/rest/api/v1/traineedetail`,loginController.getTrainee)
+
+
 
 
 };
