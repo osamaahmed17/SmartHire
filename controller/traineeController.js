@@ -30,7 +30,6 @@ class traineeController {
             traineeID: string[Math.floor(Math.random() * string.length)],
             department: req.body.department,
             contactNumber: req.body.contactNumber,
-            year_of_passing: req.body.year_of_passing,
             password: hashpassword,
         }
 
@@ -46,7 +45,6 @@ class traineeController {
 
     async traineeLogin(req, res) {
         const responseClass = new traineeController();
-
         traineeModel.findOne({ 'email': req.body.email }, function (error, trainee) {
             if (!trainee) {
                 responseClass.errorResponse.error = "No Email Found, Kindly SignUp"
@@ -78,11 +76,52 @@ class traineeController {
 
     async traineeForgetPassword(req, res) {
         const responseClass = new traineeController();
+        const hashpassword = bcryptjs.hashSync(req.body.password, 10);
+        traineeModel.findOneAndUpdate({ 'email': req.body.email }, { 'password': hashpassword }, function (error, result) {
+            if (error) {
+                responseClass.errorResponse.error = error
+                return res.status(500).send(responseClass.errorResponse)
+            }
 
+            if (result === null) {
+                responseClass.errorResponse.error = "Email Not Found!"
+                return res.status(500).send(responseClass.errorResponse)
+
+            } else {
+                responseClass.response.data = "Password Changed Successfully"
+                return res.status(200).send(responseClass.response)
+            }
+        });
     }
 
     async updateProfile(req, res) {
         const responseClass = new traineeController();
+        let traineeUpdatedObject = {
+            name: req.body.name,
+            email: req.body.email,
+            traineeID: string[Math.floor(Math.random() * string.length)],
+            department: req.body.department,
+            contactNumber: req.body.contactNumber,
+        }
+        traineeModel.findOneAndUpdate({ 'email': req.body.email }, traineeUpdatedObject, function (err, result) {
+            if (error) {
+                responseClass.errorResponse.error = error
+                return res.status(500).send(responseClass.errorResponse)
+            }
+            if (result) {
+                traineeModel.findOne({ 'email': req.body.email }, function (error, trainee) {
+                    if (error) {
+                        responseClass.errorResponse.error = error
+                        return res.status(500).send(responseClass.errorResponse)
+                    }
+
+                    if (trainee) {
+                        responseClass.response.data = "Profile Updated Successfully"
+                        return res.status(200).send(responseClass.response)
+                    }
+                })
+            }
+        })
 
     }
 }
