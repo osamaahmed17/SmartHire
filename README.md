@@ -4,6 +4,12 @@
 <h1 align="center">SmartHire </h1>
 This solution named "SmartHire" consist of two portals and a landing page with updated functionalities and redesigned user experience. It uses sentiment analysis to provide staff with a better understanding of the candidate's experience. It has NodeJs for the backend and ReactJs for the frontend. APIs are made available through postman. For testing purposes, the application is deployed on Heroku and it has IBM Watson usage for providing chatbot functionality.
 
+### To access the Application:
+Application deployed on Heroku and can be accessed through the following link 
+```sh
+https://smarthire.herokuapp.com/
+```
+
 ### To access the Postman collection:
 Make sure that you install postman from this [link](https://www.postman.com/downloads/) first 
 ```sh
