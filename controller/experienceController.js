@@ -5,7 +5,6 @@ const SpellCorrector = require('spelling-corrector');
 const SW = require('stopword');
 
 const { SentimentAnalyzer, PorterStemmer, WordTokenizer } = natural;
-
 const tokenizer = new WordTokenizer();
 const spellCorrector = new SpellCorrector();
 const analyzer = new SentimentAnalyzer('English', PorterStemmer, 'afinn');
