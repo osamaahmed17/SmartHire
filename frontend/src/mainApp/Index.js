@@ -2,7 +2,7 @@ import React from 'react'
 import Header from './Header';
 import main from '../image/main.png';
 import { withRouter } from 'react-router-dom';
-import Webchat from '../component/Webchat';
+import Webchat from '../component/WebChat';
 
 
 const Index = () => {
@@ -15,11 +15,11 @@ const Index = () => {
                 <div className="container">
                     <div className="row">
                        
-                        <div className="col-lg-4 order-2 order-lg-1 hero-img"  >
+                        <div className="col-lg-4 order-2  hero-img"  >
                             <img src={main}  alt="text" />
                         </div>
-                        <div className="col-lg-8 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-1 order-lg-2">
-                            <h2>"A country without a strong Air Force is at the mercy of any aggressor. Pakistan must build up her Air Force as quickly as possible. It must be an efficient Air Force, Second To None.-" <b>Quaid-e-Azam Muhammad Ali Jinnah</b></h2>
+                        <div className="col-lg-8 d-flex flex-column justify-content-center">
+                            <h2>"A country without a strong Air Force is at the mercy of any aggressor. Pakistan must build up her Air Force as quickly as possible. It must be an efficient Air Force, Second To None." - <b>Quaid-e-Azam Muhammad Ali Jinnah</b></h2>
                         </div>
                     </div>
                 </div>
