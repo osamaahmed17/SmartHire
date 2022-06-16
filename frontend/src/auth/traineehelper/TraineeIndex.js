@@ -9,35 +9,30 @@
   * Trainee SignUp API 
  *******************************/
  export const TraineeSignUp = Trainee => {
-     return axios(`${API}rest/api/v1/traineesigup`, {
-         method: "POST",
-         body: Trainee
-     })
-         .then((res) => {
-            console.log(res)
-             return res.json();
-         })
-         .catch(err => {
-             console.log(err);
-         });
+     
+    
+    return axios.post(`${API}rest/api/v1/traineesignup`, Trainee)
+    .then(function (res) {
+      console.log(res)
+      return res;
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+
  }
  /** **************************
   * Trainee Login or SignIn API 
  *******************************/
  export const TraineeSignIn = Trainee => {
-     return axios(`${API}rest/api/v1/traineelogin`, {
-         method: "POST",
-         headers: {
-             Accept: "application/json",
-             "Content-Type": "application/json"
-         },
-         body: JSON.stringify(Trainee)
-     })
-         .then((res) => {
-             return res.json();
+    console.log(Trainee)
+         return axios.post(`${API}rest/api/v1/traineelogin`, Trainee)
+         .then(function (res) {
+           console.log(res)
+           return res;
          })
-         .catch(err => {
-             console.log(err);
+         .catch(function (error) {
+           console.log(error);
          });
  
  }
@@ -45,47 +40,29 @@
   * Trainee Login or SignIn API 
  *******************************/
  export const sendOTPOnmail = Trainee => {
-    console.log(Trainee)
-    console.log(`${API}rest/api/v1/verifyemail`)
     return axios.post(`${API}rest/api/v1/verifyemail`, Trainee)
       .then(function (res) {
+        console.log(res)
         return res;
       })
       .catch(function (error) {
         console.log(error);
       });
 
-    //  return axios(`${API}rest/api/v1/verifyemail`, {
-    //      method: "POST",
-   
-    //      body:Trainee
-    //  })
-    //      .then((res) => {
-    //         console.log(res)
-    //          return res.json();
-    //      }).catch(err => {
-    //         console.log(err);
-    //     });
+
         
  }
  /** **************************
   * Trainee forgot Password API 
  *******************************/
  export const forgotpassword = Trainee => {
-     return axios(`${API}rest/api/v1/traineeforgetpassword`, {
-         method: "PUT",
-         headers: {
-             Accept: "application/json",
-             "Content-Type": "application/json"
-         },
-         body: JSON.stringify(Trainee)
-     })
-         .then((res) => {
-             return res.json();
-         })
-         .catch(err => {
-             console.log(err);
-         })
+    return axios.put(`${API}rest/api/v1/traineeforgetpassword`, Trainee)
+    .then(function (res) {
+      return res;
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
  }
  /** **************************
   * Update Trainee Profile API 

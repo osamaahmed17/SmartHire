@@ -23,7 +23,7 @@ module.exports = (app) => {
     app.get(`/rest/api/v1/traineedetail`, loginController.getTrainee)
 
 
-    app.post(`/rest/api/v1/traineesigup`, traineeController.traineeSignUp)
+    app.post(`/rest/api/v1/traineesignup`, traineeController.traineeSignUp)
     app.post(`/rest/api/v1/traineelogin`, traineeController.traineeLogin)
     app.put(`/rest/api/v1/traineeforgetpassword`, traineeController.traineeForgetPassword)
     app.put(`/rest/api/v1/updateprofile`, traineeController.updateProfile)

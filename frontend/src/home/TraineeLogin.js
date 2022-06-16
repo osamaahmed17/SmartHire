@@ -45,7 +45,7 @@ const TraineeLogin = () => {
     }
     const conditionchange2 = (event) => {
         event.preventDefault();
-        setTrainee({ ...Trainee, condition: "login", email: "", error: false, success: false, traineeID: "", password: "", registrationformdisplay: false, emailverification: true, forgotpasswordstate: false, otpverification: false });
+        setTrainee({ ...Trainee, condition: "login", email: "", error: false, success: false, email: "", password: "", registrationformdisplay: false, emailverification: true, forgotpasswordstate: false, otpverification: false });
     }
     const conditionchange3 = (event) => {
         event.preventDefault();
@@ -107,21 +107,27 @@ const TraineeLogin = () => {
     const onSubmit = (event) => {
         event.preventDefault();
         if (condition === "login") {
-            if (traineeID === "") {
-                alert("please enter your Email address");
+            if (email === "") {
+                alert("Please Enter Email Address");
             } else if (password === "") {
-                alert("please enter password");
+                alert("Please Enter Password");
             } else {
                 setTrainee({ ...Trainee, loading: true });
-                TraineeSignIn({ traineeID, password })
+                TraineeSignIn({ email, password })
                     .then(data => {
-                        if (data.status === true) {
-                            localStore("Trainee", data.data, () => {
+                        if (data.status === 200) {
+                            localStore("trainee", data.data, () => {
                                 setTrainee({
                                     ...Trainee,
                                     didredirect: true,
                                 })
+                                console.log({
+                                    ...Trainee,
+                                    didredirect: true,
+                                })
+                                   
                             })
+                        
                         } else {
                             setTrainee({
                                 ...Trainee,
@@ -157,7 +163,8 @@ const TraineeLogin = () => {
                 setTrainee({ ...Trainee, loading: true });
                 TraineeSignUp({ name, email, department, contactNumber, password })
                     .then(data => {
-                        if (data.status === true) {
+                        if (data.status === 200) {
+                            console.log("hello")
                             setTrainee({
                                 ...Trainee,
                                 name: "",
@@ -170,10 +177,11 @@ const TraineeLogin = () => {
                                 condition: "login",
                                 success: true,
                                 error: false,
-                                msg: data.msg,
+                                msg: data.data.msg,
                                 loading: false
                             })
-                        } else if (data.status === false) {
+                       
+                        } else  {
                             setTrainee({
                                 ...Trainee,
                                 success: false,
@@ -195,10 +203,10 @@ const TraineeLogin = () => {
                 setTrainee({ ...Trainee, loading: true })
                 forgotpassword({ email, password })
                     .then(data => {
-                        if (data.status === true) {
+                        if (data.data.success === true) {
                             setTrainee({
                                 ...Trainee,
-                                msg: data.msg,
+                                msg: data.data.data,
                                 success: true,
                                 loading: false,
                                 error: false,
@@ -209,7 +217,7 @@ const TraineeLogin = () => {
                         } else if (data.status === false) {
                             setTrainee({
                                 ...Trainee,
-                                msg: data.msg,
+                                msg: data.data.data,
                                 error: true,
                                 success: false,
                                 loading: false
@@ -497,7 +505,7 @@ const TraineeLogin = () => {
         					</span>
                         <div className="wrap-input100 validate-input m-b-23">
                             <span className="label-input100">Email</span>
-                            <input className="input100" type="text" placeholder="Enter your email" value={traineeID} onChange={handleChange("traineeID")} />
+                            <input className="input100" type="text" placeholder="Enter your email" value={email} onChange={handleChange("email")} />
                             <span className="focus-input100" data-symbol="&#xf206;"></span>
                         </div>
                         <div className="wrap-input100 validate-input m-b-20">

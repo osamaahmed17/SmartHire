@@ -28,7 +28,7 @@ class traineeController {
         let traineeObject = {
             name: req.body.name,
             email: req.body.email,
-            traineeID: req.body.traineeID,
+            traineeID: Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 10),
             department: req.body.department,
             contactNumber: req.body.contactNumber,
             password: hashpassword,
@@ -40,7 +40,9 @@ class traineeController {
                 return res.status(500).send(responseClass.errorResponse)
             }
             delete traineeObject.password
-            responseClass.response.data = traineeObject
+            delete responseClass.response.data
+            responseClass.response.res = traineeObject
+            responseClass.response.msg= 'Signup Successful.Please Login'
             return res.status(200).send(responseClass.response)
         })
     }
@@ -70,7 +72,7 @@ class traineeController {
                     } else {
                         sessStore = req.session;
                         sessStore.email = req.body.email;
-                        responseClass.response.data = "Login Successfully"
+                        responseClass.response.data = trainee
                         return res.status(200).send(responseClass.response)
                     }
                 });
