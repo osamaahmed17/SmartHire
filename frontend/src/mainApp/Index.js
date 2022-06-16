@@ -2,7 +2,7 @@ import React from 'react'
 import Header from './Header';
 import main from '../image/main.png';
 import { withRouter } from 'react-router-dom';
-import WebChatComponent from '../component/WebChatComponent';
+import Webchat from '../component/Webchat';
 
 
 const Index = () => {
@@ -36,7 +36,7 @@ const Index = () => {
                 </div>
             </footer>
             <a href="#" className="back-to-top"><i className='bx bxs-up-arrow-alt bx-fade-down'></i></a>
-            <WebChatComponent />
+            <Webchat />
 
         </div>
     )
