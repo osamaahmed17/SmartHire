@@ -2,7 +2,7 @@ import React from 'react'
 import Header from './Header';
 import main from '../image/main.png';
 import { withRouter } from 'react-router-dom';
-import WebeChatComponent from '../component/webChatComponent';
+import WebeChatComponent from '../component/WebChatComponent';
 
 
 const Index = () => {
