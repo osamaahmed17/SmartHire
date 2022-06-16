@@ -35,6 +35,7 @@ const sendOTP = function (email, response) {
         }
 
         responseClass.response.data = "OTP Sent Successfully"
+        responseClass.response.otp = otp
         responseClass.response.result = result
         return response.status(200).send(responseClass.response)
 

@@ -73,7 +73,7 @@ const TraineeLogin = () => {
             loading && (
                 <div className="row">
                     <div className="col-md-12">
-                        <h5 className="text-success">Loading....<i class='bx bx-loader bx-spin' ></i></h5>
+                        <h5 className="text-success">Loading....<i className='bx bx-loader bx-spin' ></i></h5>
                     </div>
                 </div>
             )
@@ -284,7 +284,7 @@ const TraineeLogin = () => {
                     <div className="row m-t-20 m-b-30">
                         <div className="col-md-8 offset-md-2">
                             <div className="wrap-input100 validate-input m-b-15">
-                                <span className="label-input100">Password<span class="asteriskField">*</span></span>
+                                <span className="label-input100">Password<span className="asteriskField">*</span></span>
                                 <input className="input100" type="password" placeholder="Please enter new password" value={password} onChange={handleChange("password")} />
                                 <span className="focus-input100" data-symbol="&#xf206;"></span>
                             </div>
@@ -293,7 +293,7 @@ const TraineeLogin = () => {
                     <div className="row m-t-20 m-b-30">
                         <div className="col-md-8 offset-md-2">
                             <div className="wrap-input100 validate-input m-b-15">
-                                <span className="label-input100">confirm Password<span class="asteriskField">*</span></span>
+                                <span className="label-input100">confirm Password<span className="asteriskField">*</span></span>
                                 <input className="input100" type="password" placeholder="Please re-enter your password" value={Cpassword} onChange={handleChange("Cpassword")} />
                                 <span className="focus-input100" data-symbol="&#xf206;"></span>
                             </div>
@@ -319,9 +319,9 @@ const TraineeLogin = () => {
                     <hr />
                     <div className="row m-t-40 m-b-30">
                         <div className="col-md-8 offset-md-2">
-                            <p> <u>Note<span class="asteriskField">*</span></u> Please Enter Department Provided Email Address For Sending Details</p>
+                            <p> <u>Note<span className="asteriskField">*</span></u> Please Enter Department Provided Email Address For Sending Details</p>
                             <div className="wrap-input100 validate-input m-b-15">
-                                <span className="label-input100">Email<span class="asteriskField">*</span></span>
+                                <span className="label-input100">Email<span className="asteriskField">*</span></span>
                                 <input className="input100" type="email" placeholder="Please Enter your Email" value={email} onChange={handleChange("email")} />
                                 <span className="focus-input100" data-symbol="&#xf206;"></span>
                             </div>
@@ -345,7 +345,7 @@ const TraineeLogin = () => {
                         <div className="col-md-8 offset-md-2">
                             <p> Please Enter OTP Sent On {email}</p>
                             <div className="wrap-input100 validate-input m-b-15">
-                                <span className="label-input100">One Time Password (OTP)<span class="asteriskField">*</span></span>
+                                <span className="label-input100">One Time Password (OTP)<span className="asteriskField">*</span></span>
                                 <input className="input100" type="email" placeholder="Please enter OTP" value={traineeID} onChange={handleChange("traineeID")} />
                                 <span className="focus-input100" data-symbol="&#xf206;"></span>
                             </div>
@@ -369,22 +369,22 @@ const TraineeLogin = () => {
                     <div className="row m-t-15">
                         <div className="col-md-6">
                             <div className="wrap-input100 validate-input m-b-15">
-                                <span className="label-input100">Full Name<span class="asteriskField">*</span></span>
+                                <span className="label-input100">Full Name<span className="asteriskField">*</span></span>
                                 <input className="input100" type="text" placeholder="Enter your Name" value={name} onChange={handleChange("name")} />
                                 <span className="focus-input100" data-symbol="&#xf206;"></span>
                             </div>
                             <div className="wrap-input100 validate-input m-b-15">
-                                <span className="label-input100">Email<span class="asteriskField">*</span></span>
+                                <span className="label-input100">Email<span className="asteriskField">*</span></span>
                                 <input disabled className="input100" type="email" placeholder="Enter your Email" value={email} onChange={handleChange("email")} />
                                 <span className="focus-input100" data-symbol="&#xf206;"></span>
                             </div>
                             <div className="wrap-input100 validate-input m-b-15">
-                                <span className="label-input100">Trainee ID<span class="asteriskField">*</span></span>
+                                <span className="label-input100">Trainee ID<span className="asteriskField">*</span></span>
                                 <input className="input100" type="text" placeholder="Enter your Trainee ID" value={traineeID} onChange={handleChange("traineeID")} />
                                 <span className="focus-input100" data-symbol="&#xf206;"></span>
                             </div>
                             <div className="wrap-input100 validate-input m-b-15">
-                                <span className="label-input100">Department<span class="asteriskField">*</span></span>
+                                <span className="label-input100">Department<span className="asteriskField">*</span></span>
                                 <select className="select_input100" value={department} onChange={handleChange("department")}>
                                     <option disabled>***select option***</option>
                                     <option>Human Resource</option>
@@ -397,18 +397,18 @@ const TraineeLogin = () => {
                         </div>
                         <div className="col-md-6">
                             <div className="wrap-input100 validate-input m-b-15">
-                                <span className="label-input100">Contact Number<span class="asteriskField">*</span></span>
+                                <span className="label-input100">Contact Number<span className="asteriskField">*</span></span>
                                 <input className="input100" type="number" placeholder="Enter your Contact Number" value={contactNumber} onChange={handleChange("contactNumber")} />
                                 <span className="focus-input100" data-symbol="&#xf206;"></span>
                             </div>
                        
                             <div className="wrap-input100 validate-input m-b-15">
-                                <span className="label-input100">Password<span class="asteriskField">*</span></span>
+                                <span className="label-input100">Password<span className="asteriskField">*</span></span>
                                 <input className="input100" type="password" placeholder="Enter Your Password" value={password} onChange={handleChange("password")} />
                                 <span className="focus-input100" data-symbol="&#xf206;"></span>
                             </div>
                             <div className="wrap-input100 validate-input m-b-15">
-                                <span className="label-input100">Confirm Password<span class="asteriskField">*</span></span>
+                                <span className="label-input100">Confirm Password<span className="asteriskField">*</span></span>
                                 <input className="input100" type="password" placeholder="Enter Your Confirm Password" value={Cpassword} onChange={handleChange("Cpassword")} />
                                 <span className="focus-input100" data-symbol="&#xf206;"></span>
                             </div>
@@ -425,39 +425,39 @@ const TraineeLogin = () => {
     const modalFooterButton = () => {
         if (emailverification === true) {
             return (
-                <div class="modal-footer">
+                <div className="modal-footer">
                     {successmsg()}
                     {errormsg()}
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal" onClick={conditionchange2}>Close</button>
-                    <button type="button" class="btn btn-primary" onClick={genterateOTP}>Get OTP</button>
+                    <button type="button" className="btn btn-secondary" data-dismiss="modal" onClick={conditionchange2}>Close</button>
+                    <button type="button" className="btn btn-primary" onClick={genterateOTP}>Get OTP</button>
                 </div>
             )
         } else if (otpverification === true) {
             return (
-                <div class="modal-footer">
+                <div className="modal-footer">
                     {successmsg()}
                     {errormsg()}
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal" onClick={conditionchange2}>Close</button>
-                    <button type="button" class="btn btn-primary" onClick={otpcheck}>Submit</button>
+                    <button type="button" className="btn btn-secondary" data-dismiss="modal" onClick={conditionchange2}>Close</button>
+                    <button type="button" className="btn btn-primary" onClick={otpcheck}>Submit</button>
                 </div>
             )
         } else if (registrationformdisplay === true) {
             return (
-                <div class="modal-footer">
+                <div className="modal-footer">
                     {successmsg()}
                     {errormsg()}
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal" onClick={conditionchange2}>Close</button>
-                    <button type="button" class="btn btn-primary" onClick={onSubmit}>SignUp</button>
+                    <button type="button" className="btn btn-secondary" data-dismiss="modal" onClick={conditionchange2}>Close</button>
+                    <button type="button" className="btn btn-primary" onClick={onSubmit}>SignUp</button>
                 </div>
             )
         } else if (forgotpasswordstate === true) {
             return (
-                <div class="modal-footer">
+                <div className="modal-footer">
                     {successmsg()}
                     {errormsg()}
                     {loadingmsg()}
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal" onClick={conditionchange2}>Close</button>
-                    <button type="button" class="btn btn-primary" onClick={onSubmit}>change password</button>
+                    <button type="button" className="btn btn-secondary" data-dismiss="modal" onClick={conditionchange2}>Close</button>
+                    <button type="button" className="btn btn-primary" onClick={onSubmit}>change password</button>
                 </div>
             )
         }
@@ -468,10 +468,10 @@ const TraineeLogin = () => {
     ****************************************/
     const TraineeRegistration = () => {
         return (
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content">
-                        <div class="modal-body">
+            <div className="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div className="modal-dialog modal-lg" role="document">
+                    <div className="modal-content">
+                        <div className="modal-body">
                             {emailForm()}
                             {loadingmsg()}
                             {otpForm()}

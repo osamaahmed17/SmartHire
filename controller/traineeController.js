@@ -28,7 +28,7 @@ class traineeController {
         let traineeObject = {
             name: req.body.name,
             email: req.body.email,
-            traineeID: Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 10),
+            traineeID: req.body.traineeID,
             department: req.body.department,
             contactNumber: req.body.contactNumber,
             password: hashpassword,
