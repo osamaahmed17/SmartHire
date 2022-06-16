@@ -1,12 +1,16 @@
+
+
 import React, { useEffect } from 'react';
 import { withWebChat } from '@ibm-watson/assistant-web-chat-react';
 
-const myLocation = ({ location, createWebChatInstance }) => {
+const MyLocation = ({  createWebChatInstance }) => {
 
   useEffect(() => {
     function onWebChatLoad(instance) {
       instance.render();
     }
+
+    // A web chat configuration options object as documented at https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#configurationobject
     const webChatOptions = {
       integrationID: "3498e0c3-b5d1-4a48-9a8a-f0c49d84b629", // The ID of this integration.
       region: "au-syd", // The region your integration is hosted in.
@@ -17,6 +21,8 @@ const myLocation = ({ location, createWebChatInstance }) => {
     createWebChatInstance(webChatOptions);
   }, []);
 
+  return <div></div>;
 };
 
-export default withWebChat()(myLocation);
+// Wrap the component with the method returned by `withWebChat`.
+export default withWebChat()(MyLocation);
