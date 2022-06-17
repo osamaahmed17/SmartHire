@@ -101,7 +101,6 @@ export const TraineeLogout = () => {
   * Alumni Data API 
  *******************************/
  export const AlumniData = (val) => {
-    console.log(val)
     return axios.get(`${API}rest/api/v1/alumni/${val}`)
     .then(function (res) {
         console.log(res)
@@ -116,20 +115,15 @@ export const TraineeLogout = () => {
  * Add Interview Exp 
 *******************************/
 export const AddInterviewExp = (values) => {
-    return axios(`${API}/rest/api/v1/experience`, {
-        method: "POST",
-        headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(values)
+
+    return axios.post(`${API}rest/api/v1/experience`, values)
+    .then(function (res) {
+        console.log(res)
+        return res;
     })
-        .then((res) => {
-            return res.json();
-        })
-        .catch(err => {
-            console.log(err);
-        });
+    .catch(function (error) {
+        console.log(error);
+    });
 }
 /** **************************
  * Get Interview Exp Details 

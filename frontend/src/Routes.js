@@ -8,6 +8,8 @@ import PrivateRoute from './auth/helper/privateroute/PrivateRoute';
 import EditProfile from './trainee/profile/EditProfile';
 import Profile from './trainee/profile/Profile';
 import AlumniIndex from './trainee/alumni/AlumniIndex';
+import InterviewExp from './trainee/interviewexp/InterviewExp';
+
 
 import ChangePassword from './trainee/profile/ChangePassword';
 
@@ -28,12 +30,9 @@ const Routes = () => {
                     <PrivateRoute path="/EditProfile" exact component={EditProfile} />
                     <PrivateRoute path="/ChangePassword" exact component={ChangePassword} />
                     <PrivateRoute path="/TraineeAlumni" exact component={AlumniIndex} />
-
-                    {/* <PrivateRoute path="/TraineeAlumni" exact component={AlumniIndex} />
-                  
-                    <PrivateRoute path="/ChangePassword" exact component={ChangePassword} />
-                    <PrivateRoute path="/EditProfile" exact component={EditProfile} /> */}
+                    <PrivateRoute path="/InterviewExperience" exact component={InterviewExp} />
                     <Route path="*" exact component={PageNotFound}></Route>
+
 
 
 
