@@ -2,10 +2,14 @@ const mongoose = require("mongoose")
 const { Schema } = require('mongoose')
 
 let schema = new Schema({
+    experienceID:{
+        type: Number,
+        require: true,
+    },
     email: {
         type: String,
         require: true,
-        unique: true
+       
     },
     traineeName: {
         type: String,
