@@ -19,7 +19,9 @@ const Profile = () => {
     const traineeLabel = {
         color: "black",
         fontFamily: "Verdana",
-        fontWeight: "bold"
+        fontWeight: "bold",
+        fontSize: "20px",
+
     }
     const getUserProfileFromLocal = () => {
         if (getlocalstore("trainee"))

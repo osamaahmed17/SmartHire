@@ -87,12 +87,12 @@ class traineeController {
         traineeModel.findOneAndUpdate({ 'email': req.body.email }, { 'password': hashpassword }, function (error, result) {
             if (error) {
                 responseClass.errorResponse.error = error
-                return res.status(500).send(responseClass.errorResponse)
+                return res.status(200).send(responseClass.errorResponse)
             }
 
             if (result === null) {
                 responseClass.errorResponse.error = "Email Not Found!"
-                return res.status(500).send(responseClass.errorResponse)
+                return res.status(200).send(responseClass.errorResponse)
 
             } else {
                 responseClass.response.data = "Password Changed Successfully"
