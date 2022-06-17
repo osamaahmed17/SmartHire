@@ -65,20 +65,13 @@ export const forgotpassword = Trainee => {
  * Update Trainee Profile API 
 *******************************/
 export const updateProfile = Trainee => {
-    return axios(`${API}rest/api/v1/updateprofile`, {
-        method: "PUT",
-        headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(Trainee)
+    return axios.put(`${API}rest/api/v1/updateprofile`, Trainee)
+    .then(function (res) {
+        return res;
     })
-        .then((res) => {
-            return res.json();
-        })
-        .catch(err => {
-            console.log(err);
-        })
+    .catch(function (error) {
+        console.log(error);
+    });
 }
 
 /** **************************

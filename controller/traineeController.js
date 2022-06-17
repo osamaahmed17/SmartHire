@@ -111,20 +111,21 @@ class traineeController {
             contactNumber: req.body.contactNumber,
         }
         if (sessStore != undefined) {
+            console.log(traineeUpdatedObject)
             traineeModel.findOneAndUpdate({ 'email': sessStore.email }, traineeUpdatedObject, function (error, result) {
                 if (error) {
                     responseClass.errorResponse.error = error
-                    return res.status(500).send(responseClass.errorResponse)
+                    return res.status(200).send(responseClass.errorResponse)
                 }
                 if (result) {
                     traineeModel.findOne({ 'email': req.body.email }, function (error, trainee) {
                         if (error) {
                             responseClass.errorResponse.error = error
-                            return res.status(500).send(responseClass.errorResponse)
+                            return res.status(200).send(responseClass.errorResponse)
                         }
     
                         if (trainee) {
-                            responseClass.response.data = "Profile Updated Successfully"
+                            responseClass.response.data =trainee
                             return res.status(200).send(responseClass.response)
                         }
                     })
@@ -132,8 +133,8 @@ class traineeController {
             })
         }
         else {
-            responseClass.errorResponse.data = "User has been logged out"
-            return res.status(500).send(responseClass.response)
+            responseClass.errorResponse.error = "User has been logged out"
+            return res.status(200).send(responseClass.errorResponse)
         }
 
     }
