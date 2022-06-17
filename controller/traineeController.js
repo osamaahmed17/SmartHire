@@ -52,22 +52,22 @@ class traineeController {
         traineeModel.findOne({ 'email': req.body.email }, function (error, trainee) {
             if (!trainee) {
                 responseClass.errorResponse.error = "No Email Found, Kindly SignUp"
-                return res.status(500).send(responseClass.errorResponse)
+                return res.status(200).send(responseClass.errorResponse)
             }
             else if (error) {
                 responseClass.errorResponse.error = error
-                return res.status(500).send(responseClass.errorResponse)
+                return res.status(200).send(responseClass.errorResponse)
             }
             else {
                 bcryptjs.compare(req.body.password, trainee.password, function (error, isMatch) {
                     if (error) {
                         responseClass.errorResponse.error = error
-                        return res.status(500).send(responseClass.errorResponse)
+                        return res.status(200).send(responseClass.errorResponse)
                     }
 
                     if (isMatch === false) {
                         responseClass.errorResponse.error = "Invalid Password"
-                        return res.status(500).send(responseClass.errorResponse)
+                        return res.status(200).send(responseClass.errorResponse)
 
                     } else {
                         sessStore = req.session;
