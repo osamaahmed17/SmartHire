@@ -13,7 +13,7 @@ const Profile = () => {
         color: "black",
         fontSize: "19px",
         fontFamily: "Verdana",
-        fontWeight: "light"
+        fontWeight: "normal"
     }
 
     const traineeLabel = {
