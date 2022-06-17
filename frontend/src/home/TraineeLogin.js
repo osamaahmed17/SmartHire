@@ -115,16 +115,13 @@ const TraineeLogin = () => {
                 setTrainee({ ...Trainee, loading: true });
                 TraineeSignIn({ email, password })
                     .then(data => {
-                        if (data.status === 200) {
+                        if (data.data.success === true) {
                             localStore("trainee", data.data, () => {
                                 setTrainee({
                                     ...Trainee,
                                     didredirect: true,
                                 })
-                                console.log({
-                                    ...Trainee,
-                                    didredirect: true,
-                                })
+                            
                                    
                             })
                         
@@ -132,7 +129,7 @@ const TraineeLogin = () => {
                             setTrainee({
                                 ...Trainee,
                                 error: true,
-                                msg: data.msg,
+                                msg: data.data.error,
                                 traineeID: "",
                                 password: ""
                             })

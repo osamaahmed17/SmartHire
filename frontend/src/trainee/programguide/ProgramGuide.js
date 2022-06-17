@@ -2,7 +2,7 @@ import React from 'react'
 import Base from '../Base';
 import { Link } from 'react-router-dom';
 
-const ProgamGuide = () => {
+const ProgramGuide = () => {
     return (
         <Base>
             <div className="header bg-main pb-6">
@@ -17,35 +17,38 @@ const ProgamGuide = () => {
                                 </nav>
                             </div>
                         </div>
-                        <div className="row mb-2">
-                            <div className="col-lg-12 text-white">
-                                <h2>Department Program Guidelines</h2>
-                            </div>
-                        </div>
                         <div className="row">
                             <div className="col-xl-4 col-md-6">
                                 <Link to="/WebDevelopment">
+
+
                                     <div className="mycard card-stats">
-                                        <div className="card-body">
-                                            <div className="row">
-                                                <div className="col-md-12">
-                                                    <h4 className="card-title text-uppercase text-muted mb-0">Program Guide For</h4>
-                                                    <span className="h2 font-weight-bold mb-0 text-dark">Human Resource Management</span>
-                                                </div>
+
+
+                                        <div className="card text-white bg-primary mb-3" style={{ "maxWidth": "50rem" }}>
+                                            <div className="card-header">
+                                                Program Guide
+                                            </div>
+                                            <div className="card-body">
+                                                <h6 className="card-title">Human Resource Management</h6>
                                             </div>
                                         </div>
                                     </div>
+
+
                                 </Link>
                             </div>
                             <div className="col-xl-4 col-md-6">
                                 <Link to="/CompetitiveProgramming">
                                     <div className="mycard card-stats">
-                                        <div className="card-body">
-                                            <div className="row">
-                                                <div className="col-md-12">
-                                                <h4 className="card-title text-uppercase text-muted mb-0">Program Guide For</h4>
-                                                    <span className="h2 font-weight-bold mb-0 text-dark">Manufacturing and Machineries</span>
-                                                </div>
+
+
+                                        <div className="card text-white bg-primary mb-3" style={{ "maxWidth": "50rem" }}>
+                                            <div className="card-header">
+                                                Program Guide
+                                            </div>
+                                            <div className="card-body">
+                                                <h6 className="card-title">Manufacturing and Machineries</h6>
                                             </div>
                                         </div>
                                     </div>
@@ -59,4 +62,4 @@ const ProgamGuide = () => {
     )
 }
 
-export default ProgamGuide;
+export default ProgramGuide;
