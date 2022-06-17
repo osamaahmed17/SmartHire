@@ -47,7 +47,7 @@ const Navigation = () => {
     const redirect = () => {
         return (
             didredirect && (
-                <Redirect to="/TraineeLogin" />
+                <Redirect to="/" />
             )
         )
     }
