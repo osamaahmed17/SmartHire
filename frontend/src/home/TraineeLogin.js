@@ -143,19 +143,19 @@ const TraineeLogin = () => {
                 alert("please enter Traine ID");
             }
             if (name === "") {
-                alert("please enter Name");
+                alert("Please Enter Name");
             } else if (email === "") {
-                alert("please enter Email");
+                alert("Please Enter Email");
             } else if (department === "") {
-                alert("please select Department");
+                alert("Please Select Department");
             } else if (!contactNumber) {
-                alert("please enter Contact number");
+                alert("Please Enter Contact Number");
             } else if (password === "") {
-                alert("please enter password");
+                alert("Please Enter Password");
             } else if (Cpassword === "") {
-                alert("please enter conform password");
+                alert("Please Enter Confirm Password");
             } else if (password !== Cpassword) {
-                alert("password and conform password NOT match");
+                alert("Password and Confirm Password Not Matched");
             } else {
                 setTrainee({ ...Trainee, loading: true });
                 TraineeSignUp({ name, email, department, contactNumber, password })

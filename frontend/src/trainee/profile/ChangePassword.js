@@ -139,8 +139,8 @@ const ChangePassword = () => {
                                             <span className="focus-input100" data-symbol="&#xf190;"></span>
                                         </div>
                                         <div className="wrap-input100 validate-input m-b-15">
-                                            <span className="label-input100">Conform Password<span class="asteriskField">*</span></span>
-                                            <input className="input100" type="password" placeholder="Please Enter Conform Password" value={Cpassword} onChange={handleChange("Cpassword")} />
+                                            <span className="label-input100">Confirm Password<span class="asteriskField">*</span></span>
+                                            <input className="input100" type="password" placeholder="Re-Enter New Password" value={Cpassword} onChange={handleChange("Cpassword")} />
                                             <span className="focus-input100" data-symbol="&#xf190;"></span>
                                         </div>
                                         <button className="btn btn-md btn-primary mt-2" onClick={OnSubmit}>Change Password</button>
