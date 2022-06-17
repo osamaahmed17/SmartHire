@@ -97,27 +97,23 @@ export const TraineeLogout = () => {
         localStorage.clear();
     }
 }
-//  /** **************************
-//   * Trainee Logout API 
-//  *******************************/
-//  export const AlumniData = (val) => {
-//      return axios(`${API}Trainee/convertExcelToJson/${val}`, {
-//          method: "GET",
-//          headers: {
-//              Accept: "application/json",
-//              "Content-Type": "application/json"
-//          },
-//      })
-//          .then((res) => {
-//              return res.json();
-//          })
-//          .catch(err => {
-//              console.log(err);
-//          });
-//  }
+ /** **************************
+  * Alumni Data API 
+ *******************************/
+ export const AlumniData = (val) => {
+    console.log(val)
+    return axios.get(`${API}rest/api/v1/alumni/${val}`)
+    .then(function (res) {
+        console.log(res)
+        return res;
+    })
+    .catch(function (error) {
+        console.log(error);
+    });
+ }
 
 /** **************************
- * add Interview Exp 
+ * Add Interview Exp 
 *******************************/
 export const AddInterviewExp = (values) => {
     return axios(`${API}/rest/api/v1/experience`, {
@@ -153,22 +149,3 @@ export const GetInterviewExpDetails = () => {
             console.log(err);
         });
 }
-//  /** *********************************
-//   * update Approval of Interview Exp  
-//  *************************************/
-//  export const ApprovalInterviewDetails = (values) => {
-//      return axios(`${API}Trainee/InterviewExp/update_approval`, {
-//          method: "PUT",
-//          headers: {
-//              Accept: "application/json",
-//              "Content-Type": "application/json"
-//          },
-//          body: JSON.stringify(values)
-//      })
-//          .then((res) => {
-//              return res.json();
-//          })
-//          .catch(err => {
-//              console.log(err);
-//          })
-//  }

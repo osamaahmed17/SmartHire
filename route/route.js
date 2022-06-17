@@ -30,4 +30,6 @@ module.exports = (app) => {
 
     app.post(`/rest/api/v1/verifyemail`, authenticationController.verifyEmail)
 
+    app.get(`/rest/api/v1/alumni/:val`, traineeController.alumniData)
+
 };

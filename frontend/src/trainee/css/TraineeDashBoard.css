@@ -68,7 +68,7 @@
 }
 .alumniinputfield:focus {
     transform: skewX(-13deg);
-    background: orangered;
+    background: rgb(10, 97, 254);
     color: white;
     font-weight: 700;
 }

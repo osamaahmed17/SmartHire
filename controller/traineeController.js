@@ -101,6 +101,46 @@ class traineeController {
         });
     }
 
+    async alumniData(req, res) {
+        const responseClass = new traineeController();
+        let val = req.params.val
+        // This data would be coming from Excel file later once it's available
+        let alumni = [{
+            "name":"Osama",
+            "email":"osamaahmedtahir17@gmail.com",
+            "factory":"Aeronautical Rebuild Factory",
+            "department":"IT"
+        },
+        {
+            "name":"Fatima",
+            "email":"Fatima@gmail.com",
+            "factory":"Aeronautical Rebuild Factory",
+            "department":"IT"
+        },
+        {
+            "name":"Khan",
+            "email":"Khan@gmail.com",
+            "factory":"Aeronautical Manufacturing Factory",
+            "department":"MANUFACTURING"
+        },
+        {
+            "name":"Ammar",
+            "email":"Ammar@gmail.com",
+            "factory":"Mirage Rebuild Factory",
+            "department":"MACHINERIES"
+        },
+        {
+            "name":"Haider",
+            "email":"Haider@gmail.com",
+            "factory":"Aircraft Production Factory",
+            "department":"HR"
+        }]
+        let filteredVal = alumni.filter(x => x.department === val)
+
+        responseClass.response.data = filteredVal
+        return res.status(200).send(responseClass.response)
+    }
+
     async updateProfile(req, res) {
         const responseClass = new traineeController();
         let traineeUpdatedObject = {

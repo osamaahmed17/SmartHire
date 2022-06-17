@@ -7,6 +7,8 @@ import ProgramGuide from './trainee/programguide/ProgramGuide';
 import PrivateRoute from './auth/helper/privateroute/PrivateRoute';
 import EditProfile from './trainee/profile/EditProfile';
 import Profile from './trainee/profile/Profile';
+import AlumniIndex from './trainee/alumni/AlumniIndex';
+
 import ChangePassword from './trainee/profile/ChangePassword';
 
 
@@ -25,6 +27,7 @@ const Routes = () => {
                     <PrivateRoute path="/Profile" exact component={Profile} />
                     <PrivateRoute path="/EditProfile" exact component={EditProfile} />
                     <PrivateRoute path="/ChangePassword" exact component={ChangePassword} />
+                    <PrivateRoute path="/TraineeAlumni" exact component={AlumniIndex} />
 
                     {/* <PrivateRoute path="/TraineeAlumni" exact component={AlumniIndex} />
                   
