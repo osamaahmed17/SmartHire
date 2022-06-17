@@ -11,9 +11,8 @@ a:hover {
 
   @media (min-width: 1500px) {
     #header {
-      margin:  -100px;
+      margin:  15px;
       transition: all 0.5s;
-      padding: 0;
     }
   }
   

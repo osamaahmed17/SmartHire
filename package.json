@@ -12,7 +12,6 @@
         "frontend": "cd frontend && npm start",
         "dev": "concurrently \"npm run app\" \"npm run frontend"
     },
-    "proxy": "localhost:3000",
     "keywords": [],
     "author": "Osama Ahmed Tahir",
     "license": "ISC",

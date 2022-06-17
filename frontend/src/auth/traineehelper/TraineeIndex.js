@@ -89,10 +89,11 @@
  *******************************/
  export const isAuthenticated = () => {
      ReactGa.initialize('G-HH20HZVZWJ');
+   
      ReactGa.pageview(window.location.pathname + window.location.search);
      if (typeof window === undefined)
          return false;
-     if (localStorage.getItem('Trainee'))
+     if (localStorage.getItem('trainee'))
          return true;
      else
          return false;
