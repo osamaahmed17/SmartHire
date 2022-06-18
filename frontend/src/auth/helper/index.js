@@ -22,7 +22,7 @@ export const TraineeSignUp = Trainee => {
 }
 
 
-export const admin_login = admin => {
+export const adminLogin = admin => {
 
     return axios.post(`${API}rest/api/v1/login`, admin)
         .then(function (res) {

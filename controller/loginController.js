@@ -54,7 +54,7 @@ class adminLoginController {
             }
             else if (!admin) {
                 responseClass.errorResponse.error = "No Admin Exists"
-                return res.status(404).send(responseClass.errorResponse)
+                return res.status(200).send(responseClass.errorResponse)
             }
             else {
                 bcryptjs.compare(req.body.password, admin.password, (err, isMatch) => {
@@ -65,7 +65,7 @@ class adminLoginController {
 
                     if (isMatch === false) {
                         responseClass.errorResponse.error = "Invalid Credentials"
-                        return res.status(500).send(responseClass.errorResponse)
+                        return res.status(200).send(responseClass.errorResponse)
                     } else {
                         sessStore = req.session;
                         sessStore.email = req.body.email;

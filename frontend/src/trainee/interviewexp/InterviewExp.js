@@ -50,7 +50,7 @@ const InterviewExp = () => {
             loading && (
                 <div className="row m-2 mt-2 ml-1">
                     <div className="col-md-12">
-                        <h5 className="text-success">Loading....<i class='bx bx-loader bx-spin' ></i></h5>
+                        <h5 className="text-success">Loading....<i className='bx bx-loader bx-spin' ></i></h5>
                     </div>
                 </div>
             )
@@ -138,7 +138,7 @@ const InterviewExp = () => {
                                          
                                             <div className="col-md-12">
                                                 <div className="wrap-input100 validate-input m-b-15">
-                                                    <span className="label-input100">Department Name<span class="asteriskField">*</span></span>
+                                                    <span className="label-input100">Department Name<span className="asteriskField">*</span></span>
                                                     <input className="input100" type="text" placeholder="Please Enter Department Name" value={departmentName} onChange={handleChange("departmentName")} />
                                                     <span className="focus-input100" data-symbol="&#xf206;"></span>
                                                 </div>
@@ -146,14 +146,14 @@ const InterviewExp = () => {
 
                                             <div className="col-md-12">
                                                 <div className="wrap-input100 validate-input m-b-15">
-                                                    <span className="label-input100">Date of Interview<span class="asteriskField">*</span></span>
+                                                    <span className="label-input100">Date of Interview<span className="asteriskField">*</span></span>
                                                     <input className="input100" type="date" value={interviewDate} onChange={handleChange("interviewDate")} />
                                                     <span className="focus-input100" data-symbol="&#xf206;"></span>
                                                 </div>
                                             </div>
                                             <div className="col-md-12">
                                                 <div className="wrap-input100 validate-input m-b-15">
-                                                    <span className="label-input100">Trainee experience<span class="asteriskField">*</span></span>
+                                                    <span className="label-input100">Trainee experience<span className="asteriskField">*</span></span>
                                                     <textarea className="form-control" rows="10" placeholder="Write Your Experience" value={experience} onChange={handleChange("experience")} />
                                                 </div>
                                             </div>

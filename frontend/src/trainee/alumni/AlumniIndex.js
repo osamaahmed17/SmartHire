@@ -27,7 +27,7 @@ const AlumniIndex = () => {
             loading && (
                 <div className="row p-3">
                     <div className="col-md-12">
-                        <h5 className="text-success">Loading....<i class='bx bx-loader bx-spin' ></i></h5>
+                        <h5 className="text-success">Loading....<i className='bx bx-loader bx-spin' ></i></h5>
                     </div>
                 </div>
             )

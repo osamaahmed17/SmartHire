@@ -9,6 +9,8 @@ import EditProfile from './trainee/profile/EditProfile';
 import Profile from './trainee/profile/Profile';
 import AlumniIndex from './trainee/alumni/AlumniIndex';
 import InterviewExp from './trainee/interviewexp/InterviewExp';
+import Home from './home/Home';
+
 
 
 import ChangePassword from './trainee/profile/ChangePassword';
@@ -23,6 +25,7 @@ const Routes = () => {
             <Router>
                 <Switch>
                     <Route path="/" exact component={Index}></Route>
+                    <Route path="/Admin" exact component={Home}></Route>
                     <Route path="/TraineeLogin" exact component={TraineeLogin}></Route>
                     <PrivateRoute path="/TraineeHome" exact component={TraineeHome} />
                     <PrivateRoute path="/ProgramGuide" exact component={ProgramGuide} />

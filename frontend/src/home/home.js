@@ -2,7 +2,7 @@
  * Import Require modules
  ******************************************/
  import React, { useState } from 'react'
- import { admin_login, localStore } from '../auth/helper'
+ import { adminLogin, localStore } from '../auth/helper'
  import { Redirect } from 'react-router-dom'
  
  import '../css/main.css'
@@ -70,10 +70,12 @@
      const onSubmit = (event) => {
          event.preventDefault();
          setvalues({ ...values, error: false, loading: true });
-         admin_login({ email, password })
+         adminLogin({ email, password })
              .then(data => {
                  console.log("Data", data);
-                 if (data.status === true) {
+                 console.log(data.data.success)
+                 if (data.data.success === true) {
+                   
                      localStore('admin', data.data, ()=>{
                          setvalues({
                              ...values,
@@ -84,7 +86,7 @@
                      setvalues({
                          ...values,
                          error: true,
-                         errmsg: data.msg,
+                         errmsg: data.data.error,
                          email: '',
                          password: ''
                      })
@@ -118,7 +120,7 @@
                              {errormsg()}
                              <form className="login100-form validate-form">
                                  <span className="login100-form-title p-b-30">
-                                     Login
+                                     Admin Login
                                  </span>
                                  <div className="wrap-input100 validate-input m-b-23" data-validate="Username is reauired">
                                      <span className="label-input100">Email</span>

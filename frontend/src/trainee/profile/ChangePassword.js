@@ -25,7 +25,7 @@ const ChangePassword = () => {
             loading && (
                 <div className="row">
                     <div className="col-md-12">
-                        <h5 className="text-success">Loading....<i class='bx bx-loader bx-spin' ></i></h5>
+                        <h5 className="text-success">Loading....<i className='bx bx-loader bx-spin' ></i></h5>
                     </div>
                 </div>
             )
@@ -134,12 +134,12 @@ const ChangePassword = () => {
                                         {errormsg()}
                                         {redirectToProfile()}
                                         <div className="wrap-input100 validate-input m-b-15">
-                                            <span className="label-input100">New Password<span class="asteriskField">*</span></span>
+                                            <span className="label-input100">New Password<span className="asteriskField">*</span></span>
                                             <input className="input100" type="password" placeholder="Please Enter New Password" value={password} onChange={handleChange("password")} />
                                             <span className="focus-input100" data-symbol="&#xf190;"></span>
                                         </div>
                                         <div className="wrap-input100 validate-input m-b-15">
-                                            <span className="label-input100">Confirm Password<span class="asteriskField">*</span></span>
+                                            <span className="label-input100">Confirm Password<span className="asteriskField">*</span></span>
                                             <input className="input100" type="password" placeholder="Re-Enter New Password" value={Cpassword} onChange={handleChange("Cpassword")} />
                                             <span className="focus-input100" data-symbol="&#xf190;"></span>
                                         </div>
