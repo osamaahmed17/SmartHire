@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import TraineeLogin from './home/TraineeLogin';
 import dashboard from './dashboard/Dashboard'
 import AdminPrivateRoute from './auth/helper/privateroute/AdminPrivateRoute';
-
+import department from './dashboard/Department'
 import PageNotFound from './PageNotFound';
 import TraineeHome from './trainee//TraineeHome';
 import ProgramGuide from './trainee/programguide/ProgramGuide';
@@ -38,6 +38,7 @@ const Routes = () => {
                     <PrivateRoute path="/TraineeAlumni" exact component={AlumniIndex} />
                     <PrivateRoute path="/InterviewExperience" exact component={InterviewExp} />
                     <AdminPrivateRoute path="/dashboard" exact component={dashboard} />
+                    <AdminPrivateRoute path="/department" exact component={department} />
                     <Route path="*" exact component={PageNotFound}></Route>
 
                 </Switch>

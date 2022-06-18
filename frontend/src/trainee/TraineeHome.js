@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Base from './Base';
 
-import { getlocalstore, get_department_details, localStore, getDepartmentFormDetails } from '../auth/helper';
+import { getlocalstore, getDepartmentDetails, localStore, getDepartmentFormDetails } from '../auth/helper';
 
 
 
@@ -30,7 +30,7 @@ const TraineeHome = () => {
         } else {
             if (val === "department_data") {
                 console.log('fetch data from DB department');
-                get_department_details().then(res => {
+                getDepartmentDetails().then(res => {
                     if (res.status === 200) {
                         localStore("department_data", res.data, () => {
                             setdepartmentData(res.data);

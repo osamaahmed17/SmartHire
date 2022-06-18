@@ -49,7 +49,7 @@ export const adminLogout = () => {
 ****************************************/
 
 
-export const add_department_details = details => {
+export const addDepartmentDetails = details => {
     return axios.post(`${API}rest/api/v1/department`, details)
         .then(function (res) {
             console.log(res)
@@ -65,7 +65,7 @@ export const add_department_details = details => {
 /** ***************************************
  * Get Department Details API 
 ******************************************/
-export const get_department_details = () => {
+export const getDepartmentDetails = () => {
     return axios.get(`${API}rest/api/v1/department`)
         .then(function (res) {
             console.log(res)
@@ -79,9 +79,10 @@ export const get_department_details = () => {
  * Delete Department Details API
 ********************************************/
 
-export const delete_department_detail  = (id, next) => (event) => {
-    return axios.get(`${API}rest/api/v1/department/` + id)
+export const deleteDepartmentDetail  = (id, next) => (event) => {
+    return axios.delete(`${API}rest/api/v1/department/` + id)
     .then((res) => {
+        console.log(res)
         next();
     })
     .catch(e => {

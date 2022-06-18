@@ -21,18 +21,18 @@ const Navigation = ({ history, path }) => {
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/company">
-                            <div className="nav-link" style={currenttab(history, "/company")}>
+                        <Link to="/department">
+                            <div className="nav-link" style={currenttab(history, "/department")}>
                                 <i class='bx bxs-right-arrow-alt'></i>
-                                <span className="nav-link-text">Company</span>
+                                <span className="nav-link-text">Department</span>
                             </div>
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/student">
-                            <div className="nav-link" style={currenttab(history, "/student")}>
+                        <Link to="/trainee">
+                            <div className="nav-link" style={currenttab(history, "/trainee")}>
                                 <i class='bx bxs-right-arrow-alt'></i>
-                                <span className="nav-link-text">Student</span>
+                                <span className="nav-link-text">Trainee</span>
                             </div>
                         </Link>
                     </li>
@@ -45,10 +45,10 @@ const Navigation = ({ history, path }) => {
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/companyform">
-                            <div className="nav-link" style={currenttab(history, "/companyform")}>
+                        <Link to="/experience">
+                            <div className="nav-link" style={currenttab(history, "/experience")}>
                                 <i class='bx bxs-right-arrow-alt'></i>
-                                <span className="nav-link-text">Company Form</span>
+                                <span className="nav-link-text">Experience Overview</span>
                             </div>
                         </Link>
                     </li>
