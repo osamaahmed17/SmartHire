@@ -58,7 +58,7 @@ const Profile = () => {
                                             </div>
                                         </div>
                                         <div className="card-body">
-                                            <div className="row offset-md-3">
+                                            <div className="row offset-md-2">
                                                 <div className="col-md-5 card-userprofile">
                                                     <h4 style={traineeLabel}>Name</h4>
                                                 </div>

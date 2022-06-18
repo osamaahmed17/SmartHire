@@ -38,7 +38,7 @@ export const adminLogin = admin => {
 /** **************************
  * Admin Logout API 
 *******************************/
-export const admin_logout = () => {
+export const adminLogout = () => {
     if (typeof window !== undefined) {
         localStorage.clear();
     }
@@ -115,6 +115,7 @@ export const getlocalstore = (val) => {
  * Dashboard count
  */
 export const dataStoreLocal = (val) => {
+    console.log(localStorage.getItem(val))
     if (typeof window !== undefined) {
         if (localStorage.getItem(val)) {
             return JSON.parse(localStorage.getItem(val)).length;
@@ -175,3 +176,4 @@ export const isAdminAuthenticated = () => {
     else
         return false;
 }
+

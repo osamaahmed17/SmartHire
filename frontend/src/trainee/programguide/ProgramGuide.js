@@ -2,6 +2,11 @@ import React from 'react'
 import Base from '../Base';
 import { Link } from 'react-router-dom';
 
+let cardStyle = {
+   
+    color:"white",
+
+}
 const ProgramGuide = () => {
     return (
         <Base>
@@ -17,41 +22,40 @@ const ProgramGuide = () => {
                                 </nav>
                             </div>
                         </div>
+
                         <div className="row">
+
                             <div className="col-xl-4 col-md-6">
                                 <Link to="/WebDevelopment">
 
 
-                                    <div className="mycard card-stats">
-
-
-                                        <div className="card text-white bg-primary mb-3" style={{ "maxWidth": "50rem" }}>
-                                            <div className="card-header">
-                                                Program Guide
+                                        <div className="card bg-success" style={{ "maxWidth": "30rem" }}>
+                                            <div className="card-header" style={{ color: "black" }}>
+                                            Program Guide
                                             </div>
                                             <div className="card-body">
-                                                <h6 className="card-title">Human Resource Management</h6>
+                                            <div className="card-title"><h2 style={cardStyle}>Manufacturing and Machineries</h2></div>
                                             </div>
                                         </div>
-                                    </div>
+
+
+
+
 
 
                                 </Link>
                             </div>
                             <div className="col-xl-4 col-md-6">
                                 <Link to="/CompetitiveProgramming">
-                                    <div className="mycard card-stats">
-
-
-                                        <div className="card text-white bg-primary mb-3" style={{ "maxWidth": "50rem" }}>
-                                            <div className="card-header">
-                                                Program Guide
+                                  
+                                <div className="card bg-success" style={{ "maxWidth": "30rem" }}>
+                                            <div className="card-header" style={{ color: "black" }}>
+                                            Program Guide
                                             </div>
                                             <div className="card-body">
-                                                <h6 className="card-title">Manufacturing and Machineries</h6>
+                                            <div className="card-title"><h2 style={cardStyle}>Human Resource Management</h2></div>
                                             </div>
                                         </div>
-                                    </div>
                                 </Link>
                             </div>
                         </div>

@@ -164,26 +164,18 @@ const TraineeHome = () => {
                                     return (
 
                                         <button className="col-md-4 col-sm-6 mt-3" data-toggle="modal" data-target="#DepartmentModel" key={index} onClick={getIndividualDepartment(data._id)}>
-                                            <div className="mycard card-stats">
 
-                                               
-                                                    <div className="card text-white bg-info mb-3" style={{"maxWidth": "30rem"}}>
+                                           
+                                            <div className="card text-white bg-success" style={{"maxWidth": "30rem"}}>
+                                            <div className="card-header" style={{color:"black"}}>
+                                                
+                                               <h5>{data.factory}</h5> 
+                                            </div>
+                                                <div className="card-body">
+                                                    <h5 className="card-title">{data.name}</h5>
+                                                    <h6 className="card-text">{data.field}</h6>
+                                                </div>
 
-                                                        <div className="card-header">
-                                                        {data.factory}
-                                                        </div>
-                                                        <div className="card-body">
-                                                            <h5 className="card-title">{data.name}</h5>
-                                                            <h6 className="card-text">{data.field}</h6>
-                                                        </div>
-                                                     
-                                                    </div>
-
-                                                    
-                                                    
-
-
-                                    
                                             </div>
                                         </button>
                                     )

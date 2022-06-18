@@ -84,7 +84,7 @@ const AlumniIndex = () => {
                                         </select>
                                     </div>
                                     <div className="col-md-2">
-                                        <button className="btn btn-sm btn-success" onClick={OnSubmit}>Get Data</button>
+                                        <button className="btn btn-sm btn-primary" onClick={OnSubmit}>Get Data</button>
                                     </div>
                                 </div>
                             </div>
@@ -93,7 +93,7 @@ const AlumniIndex = () => {
                 </div>
             </div>
             <div className="container-fluid mt--6">
-                <div className="card bg-default shadow">
+                <div className="card bg-primary shadow">
                     <div className="card-header bg-transparent border-0">
                         <div className="row">
                             <div className="col-md-6">
