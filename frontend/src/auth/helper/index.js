@@ -127,7 +127,7 @@ export const dataStoreLocal = (val) => {
 /** ***************************************
  * Get Trainee Details API 
 ******************************************/
-export const getStudentDetails = () => {
+export const getTraineeDetails = () => {
 
     return axios.get(`${API}rest/api/v1/traineedetail`)
     .then(function (res) {

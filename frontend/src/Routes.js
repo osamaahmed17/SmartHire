@@ -1,9 +1,10 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import TraineeLogin from './home/TraineeLogin';
-import dashboard from './dashboard/Dashboard'
+import Dashboard from './dashboard/Dashboard'
+import Trainee from './dashboard/Trainee'
 import AdminPrivateRoute from './auth/helper/privateroute/AdminPrivateRoute';
-import department from './dashboard/Department'
+import Department from './dashboard/Department'
 import PageNotFound from './PageNotFound';
 import TraineeHome from './trainee//TraineeHome';
 import ProgramGuide from './trainee/programguide/ProgramGuide';
@@ -37,8 +38,9 @@ const Routes = () => {
                     <PrivateRoute path="/ChangePassword" exact component={ChangePassword} />
                     <PrivateRoute path="/TraineeAlumni" exact component={AlumniIndex} />
                     <PrivateRoute path="/InterviewExperience" exact component={InterviewExp} />
-                    <AdminPrivateRoute path="/dashboard" exact component={dashboard} />
-                    <AdminPrivateRoute path="/department" exact component={department} />
+                    <AdminPrivateRoute path="/dashboard" exact component={Dashboard} />
+                    <AdminPrivateRoute path="/department" exact component={Department} />
+                    <AdminPrivateRoute path="/trainee" exact component={Trainee} />
                     <Route path="*" exact component={PageNotFound}></Route>
 
                 </Switch>
