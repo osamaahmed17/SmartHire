@@ -129,17 +129,12 @@ export const AddInterviewExp = (values) => {
  * Get Interview Exp Details 
 *******************************/
 export const GetInterviewExpDetails = () => {
-    return axios(`${API}/rest/api/v1/experience`, {
-        method: "GET",
-        headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json"
-        },
+    return axios.get(`${API}rest/api/v1/experience`)
+    .then(function (res) {
+        console.log(res)
+        return res;
     })
-        .then((res) => {
-            return res.json();
-        })
-        .catch(err => {
-            console.log(err);
-        });
+    .catch(function (error) {
+        console.log(error);
+    });
 }

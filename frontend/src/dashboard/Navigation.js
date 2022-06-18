@@ -14,7 +14,7 @@ const Navigation = ({ history, path }) => {
                 <ul className="navbar-nav">
                     <li className="nav-item">
                         <Link to="/dashboard">
-                            <div className="nav-link" style={currenttab(history, "/dashboard")}>
+                            <div className="nav-link" style={currenttab(history, "/Dashboard")}>
                                 <i class='bx bxs-right-arrow-alt'></i>
                                 <span className="nav-link-text">Dashboard</span>
                             </div>
@@ -22,7 +22,7 @@ const Navigation = ({ history, path }) => {
                     </li>
                     <li className="nav-item">
                         <Link to="/department">
-                            <div className="nav-link" style={currenttab(history, "/department")}>
+                            <div className="nav-link" style={currenttab(history, "/Department")}>
                                 <i class='bx bxs-right-arrow-alt'></i>
                                 <span className="nav-link-text">Department</span>
                             </div>
@@ -30,23 +30,15 @@ const Navigation = ({ history, path }) => {
                     </li>
                     <li className="nav-item">
                         <Link to="/trainee">
-                            <div className="nav-link" style={currenttab(history, "/trainee")}>
+                            <div className="nav-link" style={currenttab(history, "/Trainee")}>
                                 <i class='bx bxs-right-arrow-alt'></i>
                                 <span className="nav-link-text">Trainee</span>
                             </div>
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/alumni">
-                            <div className="nav-link" style={currenttab(history, "/alumni")}>
-                                <i class='bx bxs-right-arrow-alt'></i>
-                                <span className="nav-link-text">Alumni</span>
-                            </div>
-                        </Link>
-                    </li>
-                    <li className="nav-item">
                         <Link to="/experience">
-                            <div className="nav-link" style={currenttab(history, "/experience")}>
+                            <div className="nav-link" style={currenttab(history, "/Experience")}>
                                 <i class='bx bxs-right-arrow-alt'></i>
                                 <span className="nav-link-text">Experience Overview</span>
                             </div>
