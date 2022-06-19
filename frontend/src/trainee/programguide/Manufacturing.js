@@ -38,16 +38,6 @@ export default function Manufacturing() {
                             </div>
                             <div className="col-sm-3">
                                 <div className="card">
-                                    <iframe src="https://www.youtube.com/embed/8ciAnHfIiFA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    <div className="card-body">
-                                        <h5 className="card-title">What is Human Resource Management?</h5>
-                                        <p className="card-text">Human Resource Management is the formal systems designed to manage people in an organization. Human resource management is like a pinwheel, the management of people in an organization is at the center of eight functional areas of human resource work.</p>
-                                        <a href="https://www.youtube.com/embed/8ciAnHfIiFA" className="btn btn-primary">Access</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-sm-3">
-                                <div className="card">
                                 <iframe src="https://www.youtube.com/embed/iyOh3GUPCd4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     <div className="card-body">
                                         <h5 className="card-title">Smart Manufacturing - lessons from the industry.</h5>
