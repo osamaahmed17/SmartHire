@@ -9,7 +9,7 @@ const Header = () => {
                 <div className="container d-flex align-items-center">
                     <h1 className="text-white"><img src={logo} draggable="false" style={{height: "30%",width: "30%"}} alt="SmartHire logo" /> </h1>
                     <Link to="/TraineeLogin"><button className="get-started-btn scrollto">Tainee Login</button></Link>
-                    <Link to="/Admin"><button className="get-admin-btn scrollto">Admin Login</button></Link>
+                    <Link to="/Admin"><button className="get-started-btn scrollto">Admin Login</button></Link>
 
                 </div>
             </header>

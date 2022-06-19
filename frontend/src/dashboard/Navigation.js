@@ -13,7 +13,7 @@ const Navigation = ({ history, path }) => {
             <div className="collapse navbar-collapse" id="sidenav-collapse-main">
                 <ul className="navbar-nav">
                     <li className="nav-item">
-                        <Link to="/dashboard">
+                        <Link to="/Dashboard">
                             <div className="nav-link" style={currenttab(history, "/Dashboard")}>
                                 <i className='bx bxs-right-arrow-alt'></i>
                                 <span className="nav-link-text">Dashboard</span>
@@ -21,7 +21,7 @@ const Navigation = ({ history, path }) => {
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/department">
+                        <Link to="/Department">
                             <div className="nav-link" style={currenttab(history, "/Department")}>
                                 <i className='bx bxs-right-arrow-alt'></i>
                                 <span className="nav-link-text">Department</span>
@@ -29,7 +29,7 @@ const Navigation = ({ history, path }) => {
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/trainee">
+                        <Link to="/Trainee">
                             <div className="nav-link" style={currenttab(history, "/Trainee")}>
                                 <i className='bx bxs-right-arrow-alt'></i>
                                 <span className="nav-link-text">Trainee</span>
@@ -37,8 +37,8 @@ const Navigation = ({ history, path }) => {
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/experience">
-                            <div className="nav-link" style={currenttab(history, "/Experience")}>
+                        <Link to="/ExperienceOverview">
+                            <div className="nav-link" style={currenttab(history, "/ExperienceOverview")}>
                                 <i className='bx bxs-right-arrow-alt'></i>
                                 <span className="nav-link-text">Experience Overview</span>
                             </div>

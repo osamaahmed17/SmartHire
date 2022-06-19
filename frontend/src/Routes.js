@@ -36,13 +36,12 @@ const Routes = () => {
                     <PrivateRoute path="/ChangePassword" exact component={ChangePassword} />
                     <PrivateRoute path="/TraineeAlumni" exact component={AlumniIndex} />
                     <PrivateRoute path="/InterviewExperience" exact component={InterviewExp} />
+                    <PrivateRoute path="/HumanResourceManagement" exact component={HumanResourceManagement} />
+                    <PrivateRoute path="/ManufacturingAndMachineries" exact component={ManufacturingAndMachineries} />
                     <AdminPrivateRoute path="/Dashboard" exact component={Dashboard} />
                     <AdminPrivateRoute path="/Department" exact component={Department} />
                     <AdminPrivateRoute path="/Trainee" exact component={Trainee} />
-                    <PrivateRoute path="/Experience" exact component={Experience} />
-                    <PrivateRoute path="/HumanResourceManagement" exact component={HumanResourceManagement} />
-                    <PrivateRoute path="/ManufacturingAndMachineries" exact component={ManufacturingAndMachineries} />
-
+                    <AdminPrivateRoute path="/ExperienceOverview" exact component={Experience} />
                     <Route path="*" exact component={PageNotFound}></Route>
 
                 </Switch>
