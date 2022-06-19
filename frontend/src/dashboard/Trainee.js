@@ -63,7 +63,8 @@ const Trainee = () => {
                             </thead>
                            
                             <tbody>
-                                {trainees.data &&
+                            
+                                {Array.isArray(trainees.data) &&
                                     trainees.data.map((data, index) => {
                                         return (
                                             <tr key={index}>
