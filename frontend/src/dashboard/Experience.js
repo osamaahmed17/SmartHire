@@ -146,7 +146,7 @@ const Experience = () => {
                         </div>
                         <div className="row">
                           
-                            {interviewExp.data && interviewExp.data.map((data, index) => {
+                            {Array.isArray(interviewExp.data) && interviewExp.data.map((data, index) => {
                               
                                     return (
                                         <button className="col-md-4 col-12 mt-3" data-toggle="modal" data-target="#departmentModel" key={index} onClick={individualExperienceData(data._id)}>
