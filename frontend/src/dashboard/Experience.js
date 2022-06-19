@@ -19,20 +19,16 @@ const Experience = () => {
     })
     const {  showmodel } = values;
     const getDetailsOfInterview = () => {
-        if (getlocalstore("interviewepxerience").length !== 0) {
-            setInterviewExp(getlocalstore("interviewepxerience"));
+        if (getlocalstore("interviewexperience").length !== 0) {
+            setInterviewExp(getlocalstore("interviewexperience"));
         }
     }
 
     const getDataFromDB = () => {
-        setValues({ ...values});
         GetInterviewExpDetails().then(res => {
-
             if (res.data.success === true) {
-
-                localStore("interviewepxerience", res.data, () => {
-                    setInterviewExp(res.data.data);
-                    setValues({ ...values });
+                localStore("interviewexperience", res.data.data, () => {
+                    setInterviewExp(res.data.data);      
                 });
             } else {
                 alert('Server error data Not found, please contact to Admin');
@@ -46,7 +42,7 @@ const Experience = () => {
 
     const individualExperienceData = (val) => () => {
         setValues({ ...values, showmodel: true })
-        interviewExp.data.forEach((data, index) => {
+        interviewExp.forEach((data, index) => {
             if (data._id === val) {
                 if(data.sentimentAnalysis > 0)
                 {
@@ -67,7 +63,10 @@ const Experience = () => {
             }
         })
     }
-
+    useEffect(() => {
+        getDetailsOfInterview()
+    }, [])
+    
     const InterviewDetailsModel = () => {
         return (
             showmodel && (
@@ -124,9 +123,7 @@ const Experience = () => {
         )
     }
 
-    useEffect(() => {
-        getDetailsOfInterview()
-    }, [])
+  
     return (
         <Base>
             <div className="header bg-main pb-6">
@@ -146,7 +143,7 @@ const Experience = () => {
                         </div>
                         <div className="row">
                           
-                            {Array.isArray(interviewExp.data) && interviewExp.data.map((data, index) => {
+                            {Array.isArray(interviewExp) && interviewExp.map((data, index) => {
                               
                                     return (
                                         <button className="col-md-4 col-12 mt-3" data-toggle="modal" data-target="#departmentModel" key={index} onClick={individualExperienceData(data._id)}>

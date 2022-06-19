@@ -118,7 +118,6 @@ export const AddInterviewExp = (values) => {
 
     return axios.post(`${API}rest/api/v1/experience`, values)
     .then(function (res) {
-        console.log(res)
         return res;
     })
     .catch(function (error) {
@@ -131,7 +130,6 @@ export const AddInterviewExp = (values) => {
 export const GetInterviewExpDetails = () => {
     return axios.get(`${API}rest/api/v1/experience`)
     .then(function (res) {
-        console.log(res)
         return res;
     })
     .catch(function (error) {

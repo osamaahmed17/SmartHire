@@ -139,7 +139,6 @@ const Department = () => {
     -------------------------------------- */
     const getdata = () => {
         getDepartmentDetails().then(res => {
-            console.log("Department DATA", res);
             if (res.data.success === true) {
                 localStore("departmentdata", res.data.data, () => {
                     setDepartmentData(res.data.data);
