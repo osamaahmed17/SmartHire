@@ -14,7 +14,7 @@ import EditProfile from './trainee/profile/EditProfile';
 import Profile from './trainee/profile/Profile';
 import AlumniIndex from './trainee/alumni/AlumniIndex';
 import InterviewExp from './trainee/interviewexp/InterviewExp';
-import Home from './home/Home';
+import Home from './home/HomeScreen';
 
 
 
