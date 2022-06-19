@@ -15,7 +15,7 @@ const Navigation = ({ history, path }) => {
                     <li className="nav-item">
                         <Link to="/dashboard">
                             <div className="nav-link" style={currenttab(history, "/Dashboard")}>
-                                <i class='bx bxs-right-arrow-alt'></i>
+                                <i className='bx bxs-right-arrow-alt'></i>
                                 <span className="nav-link-text">Dashboard</span>
                             </div>
                         </Link>
@@ -23,7 +23,7 @@ const Navigation = ({ history, path }) => {
                     <li className="nav-item">
                         <Link to="/department">
                             <div className="nav-link" style={currenttab(history, "/Department")}>
-                                <i class='bx bxs-right-arrow-alt'></i>
+                                <i className='bx bxs-right-arrow-alt'></i>
                                 <span className="nav-link-text">Department</span>
                             </div>
                         </Link>
@@ -31,7 +31,7 @@ const Navigation = ({ history, path }) => {
                     <li className="nav-item">
                         <Link to="/trainee">
                             <div className="nav-link" style={currenttab(history, "/Trainee")}>
-                                <i class='bx bxs-right-arrow-alt'></i>
+                                <i className='bx bxs-right-arrow-alt'></i>
                                 <span className="nav-link-text">Trainee</span>
                             </div>
                         </Link>
@@ -39,7 +39,7 @@ const Navigation = ({ history, path }) => {
                     <li className="nav-item">
                         <Link to="/experience">
                             <div className="nav-link" style={currenttab(history, "/Experience")}>
-                                <i class='bx bxs-right-arrow-alt'></i>
+                                <i className='bx bxs-right-arrow-alt'></i>
                                 <span className="nav-link-text">Experience Overview</span>
                             </div>
                         </Link>

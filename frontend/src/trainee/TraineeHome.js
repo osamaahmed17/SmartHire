@@ -66,7 +66,7 @@ const TraineeHome = () => {
 
     const getIndividualDepartment = (val) => () => {
         setvalues({ ...values, Cform: true })
-        departmentData.data.map((data, index) => {
+        departmentData.data.forEach((data, index) => {
             if (data._id === val) {
                 setindividualData(data);
             }
@@ -77,7 +77,7 @@ const TraineeHome = () => {
         if (Cform === true) {
             var condi = false;
             var link_val = "";
-            departmentFormData.data.map((data, i) => {
+            departmentFormData.data.forEach((data, i) => {
 
 
                 if (data.department_name === val) {

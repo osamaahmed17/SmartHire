@@ -106,6 +106,7 @@ const AlumniIndex = () => {
                     </div>
                     <div className="table-responsive">
                         <div className="table align-items-center table-dark table-hover">
+                            <table>
                             <thead className="thead-dark">
                                 <tr>
                                     <th>Name</th>
@@ -131,6 +132,7 @@ const AlumniIndex = () => {
                                     })
                                 }
                             </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>

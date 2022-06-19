@@ -166,21 +166,21 @@ const Department = () => {
         return (
             <div className="row">
                 <div className="col-md-6">
-                    <div class="form-group">
-                        <label>Department Name<span class="asteriskField">*</span></label>
-                        <input type="email" class="form-control" placeholder="Enter Department Name" value={name} onChange={handleChange("name")} />
+                    <div className="form-group">
+                        <label>Department Name<span className="asteriskField">*</span></label>
+                        <input type="email" className="form-control" placeholder="Enter Department Name" value={name} onChange={handleChange("name")} />
                     </div>
-                    <div class="form-group">
-                        <label>Factory Name<span class="asteriskField">*</span></label>
-                        <input type="text" class="form-control" placeholder="Enter Factory Name" value={factory} onChange={handleChange("factory")} />
+                    <div className="form-group">
+                        <label>Factory Name<span className="asteriskField">*</span></label>
+                        <input type="text" className="form-control" placeholder="Enter Factory Name" value={factory} onChange={handleChange("factory")} />
                     </div>
-                    <div class="form-group">
-                        <label>Placement Link<span class="asteriskField">*</span></label>
-                        <input type="text" class="form-control" placeholder="Enter Placement Link" value={placement} onChange={handleChange("placement")} />
+                    <div className="form-group">
+                        <label>Placement Link<span className="asteriskField">*</span></label>
+                        <input type="text" className="form-control" placeholder="Enter Placement Link" value={placement} onChange={handleChange("placement")} />
                     </div>
-                    <div class="form-group">
-                        <label>Field Area<span class="asteriskField">*</span></label>
-                        <input type="text" class="form-control"  placeholder="Enter Field Area" value={field} onChange={handleChange("field")} />
+                    <div className="form-group">
+                        <label>Field Area<span className="asteriskField">*</span></label>
+                        <input type="text" className="form-control"  placeholder="Enter Field Area" value={field} onChange={handleChange("field")} />
                     </div>
                     
                 </div>
@@ -201,6 +201,8 @@ const Department = () => {
                             </div>
                             <div className="table-responsive">
                                 <div className="table align-items-center table-dark table-hover">
+                                <table>
+
                                     <thead className="thead-dark">
                                         <tr>
                                             <th>Department</th>
@@ -227,6 +229,7 @@ const Department = () => {
                                             )
                                         })}
                                     </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>

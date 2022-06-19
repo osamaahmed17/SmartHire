@@ -45,7 +45,7 @@ const TraineeLogin = () => {
     }
     const conditionchange2 = (event) => {
         event.preventDefault();
-        setTrainee({ ...Trainee, condition: "login", email: "", error: false, success: false, email: "", password: "", registrationformdisplay: false, emailverification: true, forgotpasswordstate: false, otpverification: false });
+        setTrainee({ ...Trainee, condition: "login", email: "", error: false, success: false, password: "", registrationformdisplay: false, emailverification: true, forgotpasswordstate: false, otpverification: false });
     }
     const conditionchange3 = (event) => {
         event.preventDefault();

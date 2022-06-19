@@ -51,6 +51,7 @@ const Trainee = () => {
                     </div>
                     <div className="table-responsive">
                         <div className="table align-items-center table-dark table-hover">
+                            <table>
                             <thead className="thead-dark">
                                 <tr>
                                     <th>Name</th>
@@ -60,6 +61,7 @@ const Trainee = () => {
                                     <th>Contact Number</th>
                                 </tr>
                             </thead>
+                           
                             <tbody>
                                 {trainees.data &&
                                     trainees.data.map((data, index) => {
@@ -75,6 +77,7 @@ const Trainee = () => {
                                     })
                                 }
                             </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>

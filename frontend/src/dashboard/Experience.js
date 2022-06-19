@@ -14,12 +14,10 @@ const Experience = () => {
     const [interviewExp, setInterviewExp] = useState([]);
     const [individualInterviewData, setindividualInterviewData] = useState([]);
     const [values, setValues] = useState({
-        loading: false,
         showmodel: false,
         didredirect: false,
     })
-    var count = 0;
-    const { loading, showmodel } = values;
+    const {  showmodel } = values;
     const getDetailsOfInterview = () => {
         if (getlocalstore("interviewepxerience").length !== 0) {
             setInterviewExp(getlocalstore("interviewepxerience"));
@@ -27,14 +25,14 @@ const Experience = () => {
     }
 
     const getDataFromDB = () => {
-        setValues({ ...values, loading: true });
+        setValues({ ...values});
         GetInterviewExpDetails().then(res => {
 
             if (res.data.success === true) {
 
                 localStore("interviewepxerience", res.data, () => {
                     setInterviewExp(res.data.data);
-                    setValues({ ...values, loading: false });
+                    setValues({ ...values });
                 });
                 window.location.reload(false);
             } else {
@@ -45,9 +43,11 @@ const Experience = () => {
         })
     }
 
+   
+
     const individualExperienceData = (val) => () => {
         setValues({ ...values, showmodel: true })
-        interviewExp.data.map((data, index) => {
+        interviewExp.data.forEach((data, index) => {
             if (data._id === val) {
                 if(data.sentimentAnalysis > 0)
                 {
@@ -57,12 +57,14 @@ const Experience = () => {
                 {
                     data.sentimentAnalysis = sadFace
                 }
-                else if(data.sentimentAnalysis = 0)
+                else if(data.sentimentAnalysis === 0)
                 {
                     data.sentimentAnalysis = mehFace
 
                 }
+              
                 setindividualInterviewData(data);
+               
             }
         })
     }
@@ -109,7 +111,7 @@ const Experience = () => {
                                         <h4 className="static">Sentiment Analysis</h4>
                                     </div>
                                     <div className="col-md-8 p-2 col-12">
-                                       <img style={{maxHeight:"35px"}} src={individualInterviewData.sentimentAnalysis} />
+                                       <img style={{maxHeight:"35px"}} alt="sentimentAnalysis" src={individualInterviewData.sentimentAnalysis} />
                                     </div>
                                 </div>
                             </div>
@@ -147,7 +149,6 @@ const Experience = () => {
                           
                             {interviewExp.data && interviewExp.data.map((data, index) => {
                               
-                                    count++;
                                     return (
                                         <button className="col-md-4 col-12 mt-3" data-toggle="modal" data-target="#companyModel" key={index} onClick={individualExperienceData(data._id)}>
                                             <div className="mycard card-stats">
