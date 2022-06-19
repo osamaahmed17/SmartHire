@@ -34,7 +34,6 @@ const Experience = () => {
                     setInterviewExp(res.data.data);
                     setValues({ ...values });
                 });
-                window.location.reload(false);
             } else {
                 alert('Server error data Not found, please contact to Admin');
             }
