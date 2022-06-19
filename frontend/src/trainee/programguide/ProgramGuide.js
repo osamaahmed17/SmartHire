@@ -27,8 +27,6 @@ const ProgramGuide = () => {
 
                             <div className="col-xl-4 col-md-6">
                                 <Link to="/ManufacturingAndMachineries">
-
-
                                         <div className="card bg-success" style={{ "maxWidth": "30rem" }}>
                                             <div className="card-header" style={{ color: "black" }}>
                                             Program Guide
@@ -37,17 +35,10 @@ const ProgramGuide = () => {
                                             <div className="card-title"><h2 style={cardStyle}>Manufacturing and Machineries</h2></div>
                                             </div>
                                         </div>
-
-
-
-
-
-
                                 </Link>
                             </div>
                             <div className="col-xl-4 col-md-6">
                                 <Link to="/HumanResourceManagement">
-                                  
                                 <div className="card bg-success" style={{ "maxWidth": "30rem" }}>
                                             <div className="card-header" style={{ color: "black" }}>
                                             Program Guide

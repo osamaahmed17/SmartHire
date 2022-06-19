@@ -14,13 +14,10 @@ import EditProfile from './trainee/profile/EditProfile';
 import Profile from './trainee/profile/Profile';
 import AlumniIndex from './trainee/alumni/AlumniIndex';
 import InterviewExp from './trainee/interviewexp/InterviewExp';
+import HumanResourceManagement from './trainee/programguide/HumanResourceManagemnt';
+import ManufacturingAndMachineries from './trainee/programguide/ManufacturingAndMachineries';
 import Home from './home/HomeScreen';
-
-
-
 import ChangePassword from './trainee/profile/ChangePassword';
-
-
 import Index from './mainApp/Index';
 
 
@@ -43,6 +40,8 @@ const Routes = () => {
                     <AdminPrivateRoute path="/Department" exact component={Department} />
                     <AdminPrivateRoute path="/Trainee" exact component={Trainee} />
                     <PrivateRoute path="/Experience" exact component={Experience} />
+                    <PrivateRoute path="/HumanResourceManagement" exact component={HumanResourceManagement} />
+                    <PrivateRoute path="/ManufacturingAndMachineries" exact component={ManufacturingAndMachineries} />
 
                     <Route path="*" exact component={PageNotFound}></Route>
 
