@@ -42,9 +42,9 @@ a:hover {
   
   /* Get Startet Button */
   .get-started-btn {
-    margin-left: 25px;
+    margin-left: 35px;
     color: rgb(255, 255, 255);
-    border-radius: 50px;
+    border-radius: 100px;
     padding: 6px 25px 7px 25px;
     white-space: nowrap;
     transition: 0.3s;

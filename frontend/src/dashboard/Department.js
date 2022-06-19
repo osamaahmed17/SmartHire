@@ -162,7 +162,7 @@ const Department = () => {
     /** ----------------------------------
      * Department Details Form
     -------------------------------------- */
-    const company_form = () => {
+    const departmentForm = () => {
         return (
             <div className="row">
                 <div className="col-md-6">
@@ -272,7 +272,7 @@ const Department = () => {
                         </div>
                         <hr />
                         <div className="modal-body">
-                            {company_form()}
+                            {departmentForm()}
                         </div>
                         <hr />
                         <div className="modal-footer">

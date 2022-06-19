@@ -26,7 +26,7 @@ const ProgramGuide = () => {
                         <div className="row">
 
                             <div className="col-xl-4 col-md-6">
-                                <Link to="/WebDevelopment">
+                                <Link to="/ManufacturingAndMachineries">
 
 
                                         <div className="card bg-success" style={{ "maxWidth": "30rem" }}>
@@ -46,7 +46,7 @@ const ProgramGuide = () => {
                                 </Link>
                             </div>
                             <div className="col-xl-4 col-md-6">
-                                <Link to="/CompetitiveProgramming">
+                                <Link to="/HumanResourceManagement">
                                   
                                 <div className="card bg-success" style={{ "maxWidth": "30rem" }}>
                                             <div className="card-header" style={{ color: "black" }}>

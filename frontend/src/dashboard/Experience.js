@@ -72,7 +72,7 @@ const Experience = () => {
     const InterviewDetailsModel = () => {
         return (
             showmodel && (
-                <div className="modal fade" id="companyModel" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div className="modal fade" id="departmentModel" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div className="modal-dialog modal-xl" role="document">
                         <div className="modal-content">
                             <div className="modal-body">
@@ -150,7 +150,7 @@ const Experience = () => {
                             {interviewExp.data && interviewExp.data.map((data, index) => {
                               
                                     return (
-                                        <button className="col-md-4 col-12 mt-3" data-toggle="modal" data-target="#companyModel" key={index} onClick={individualExperienceData(data._id)}>
+                                        <button className="col-md-4 col-12 mt-3" data-toggle="modal" data-target="#departmentModel" key={index} onClick={individualExperienceData(data._id)}>
                                             <div className="mycard card-stats">
                                                 <div className="card-body">
                                                     <div className="row">
