@@ -26,13 +26,13 @@ const ProgramGuide = () => {
                         <div className="row">
 
                             <div className="col-xl-4 col-md-6">
-                                <Link to="/ManufacturingAndMachineries">
+                                <Link to="/Manufacturing">
                                         <div className="card bg-success" style={{ "maxWidth": "30rem" }}>
                                             <div className="card-header" style={{ color: "black" }}>
                                             Program Guide
                                             </div>
                                             <div className="card-body">
-                                            <div className="card-title"><h2 style={cardStyle}>Manufacturing and Machineries</h2></div>
+                                            <div className="card-title"><h2 style={cardStyle}>Manufacturing</h2></div>
                                             </div>
                                         </div>
                                 </Link>

@@ -3,7 +3,7 @@ import Base from '../Base'
 import '../css/TraineeDashBoard.css';
 import { Link } from 'react-router-dom';
 
-export default function HumanResourceManagement() {
+export default function Manufacturing() {
     return (
         <Base>
             <div className="basic_webDev pb-6">
@@ -12,28 +12,27 @@ export default function HumanResourceManagement() {
                         <div className="col-md-12 col-6">
                             <nav aria-label="breadcrumb" className="d-none d-md-inline-block">
                                 <ol className="breadcrumb breadcrumb-links breadcrumb-dark">
-                                    <li className="breadcrumb-item"> <Link to="/ProgramGuide">Program Guide</Link> / Human Resource Management</li>
+                                    <li className="breadcrumb-item"> <Link to="/ProgramGuide">Program Guide</Link> / Manufacturing</li>
                                 </ol>
                             </nav>
                         </div>
                         <div className="row">
                             <div className="col-sm-3">
                                 <div className="card">
-                                    <iframe src="https://www.youtube.com/embed/A2HFusWQIeE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <iframe src="https://www.youtube.com/embed/9XkX6EGk_CA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     <div className="card-body">
-                                        <h5 className="card-title">HR Basics: Human Resource Management</h5>
-                                        <p className="card-text">HR Basics is a series of short courses, designed to highlight what you need to know about a particular human resource management topic. In today’s HR Basics, we define human resource management with a simple model.</p>
+                                        <h5 className="card-title">Inside Apple's iPhone Factory In China</h5>
+                                        <p className="card-text">Last month it emerged that Apple, the most valuable company in the world and supposedly an icon of squeaky-clean progressive values, brushed aside allegations of labour within its key Chinese supply chain.</p>
                                         <a href="https://www.youtube.com/embed/A2HFusWQIeE" className="btn btn-primary">Access</a>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-sm-3">
                                 <div className="card">
-                                    <iframe src="https://www.youtube.com/embed/aPEUKLxxh_k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    <div className="card-body">
-                                        <h5 className="card-title">Human Resource Management (HRM) Explained - Everything you Need to Know</h5>
-                                        <p className="card-text">Human Resource Management, or HRM, is critical for making businesses successful. In this video, we explain what HRM is and how it contributes to business success.</p>
-                                        <a href="https://www.youtube.com/embed/aPEUKLxxh_k" className="btn btn-primary">Access</a>
+                                <iframe src="https://www.youtube.com/embed/kC2SEiGaqoA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                                    <div className="card-body">
+                                        <h5 className="card-title">Control of Manufacturing Processes</h5>
+                                        <p className="card-text">Introduction for processes and variation framework by MIT</p>
+                                        <a href="https://www.youtube.com/embed/kC2SEiGaqoA" className="btn btn-primary">Access</a>
                                     </div>
                                 </div>
                             </div>
@@ -49,11 +48,11 @@ export default function HumanResourceManagement() {
                             </div>
                             <div className="col-sm-3">
                                 <div className="card">
-                                    <iframe src="https://www.youtube.com/embed/qWv570bxjdU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <iframe src="https://www.youtube.com/embed/iyOh3GUPCd4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     <div className="card-body">
-                                        <h5 className="card-title">Introduction to Human Resource Management</h5>
-                                        <p className="card-text">In this video we will give you Introduction to Human Resource Management and scope of Human Resource Management. We will discuss Scope of Human Resource Management in more details in our upcoming Videos. Please subscribe to our channel and press bell icon for latest videos.</p>
-                                        <a href="https://www.youtube.com/embed/qWv570bxjdU" className="btn btn-primary">Access</a>
+                                        <h5 className="card-title">Smart Manufacturing - lessons from the industry.</h5>
+                                        <p className="card-text">Consumers are changing manufacturing forever. Here are four things successful smart manufacturers know, and three they don't.</p>
+                                        <a href="ttps://www.youtube.com/embed/iyOh3GUPCd4" className="btn btn-primary">Access</a>
                                     </div>
                                 </div>
                             </div>
@@ -64,5 +63,3 @@ export default function HumanResourceManagement() {
         </Base>
     )
 }
-
-
