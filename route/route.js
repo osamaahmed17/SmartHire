@@ -9,13 +9,10 @@ module.exports = (app) => {
     app.get(`/rest/api/v1/department`, departmentController.findDepartment);
     app.delete(`/rest/api/v1/department/:id`, departmentController.deleteDepartment);
 
-    app.post(`/rest/api/v1/departmentform`, departmentController.createDepartmentForm);
-    app.get(`/rest/api/v1/departmentform`, departmentController.findDepartmentForm);
-
     app.post(`/rest/api/v1/experience`, experienceController.createExperience);
     app.get(`/rest/api/v1/experience`, experienceController.findExperience);
 
-    app.post(`/rest/api/v1/createadmin`, loginController.createAmin);
+    app.post(`/rest/api/v1/createadmin`, loginController.createAdmin);
     app.post(`/rest/api/v1/login`, loginController.loginUser);
     app.get(`/rest/api/v1/getuser`, loginController.getUser)
     app.get(`/rest/api/v1/logout`, loginController.logoutUser)

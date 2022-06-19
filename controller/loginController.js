@@ -6,7 +6,7 @@ var sessStore;
 
 class adminLoginController {
     constructor() {
-        this.createAmin = this.createAmin.bind(this);
+        this.createAdmin = this.createAdmin.bind(this);
         this.loginUser = this.loginUser.bind(this);
         this.getUser = this.getUser.bind(this);
         this.logoutUser = this.logoutUser.bind(this);
@@ -24,7 +24,7 @@ class adminLoginController {
     };
 
     
-    async createAmin(req, res) {
+    async createAdmin(req, res) {
         const responseClass = new adminLoginController();
         const hashpassword = bcryptjs.hashSync(req.body.password, 10);
 
