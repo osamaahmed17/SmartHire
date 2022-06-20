@@ -16,18 +16,29 @@ Make sure that you install postman from this [link](https://www.postman.com/down
 https://www.getpostman.com/collections/ad52afab7b3be9946b78
 ```
 
-### To install the packages
+### To install the backend packages
 ```sh
 npm install
+```
+
+### To install the frontend packages
+```sh
+cd frontend && npm install
 ```
 
 ### Add .env file with Zohomail credentials
 Make sure that you add .env file with username and password from Zohomail while following this [link](https://www.finetricks.com/send-email-with-zoho-and-nodemailer-in-node-js/)
 
 
-### To run the application on localhost
+### To run the Backend on localhost
 Make sure that the packages are installed and .env file configured before running the application on localhost.
 ```sh
 npm start
+```
+
+### To run the Frontend  on localhost
+Make sure that the backend is running and on the on another command prompt, run the following commands from the application location.
+```sh
+cd frontend && npm start
 ```
 
