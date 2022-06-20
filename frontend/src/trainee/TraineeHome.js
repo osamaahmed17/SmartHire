@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Base from './Base';
 
-import { getlocalstore, getDepartmentDetails, localStore, getDepartmentFormDetails } from '../auth/helper';
+import { getlocalstore, getDepartmentDetails, localStore } from '../auth/helper';
 
 
 
@@ -37,19 +37,6 @@ const TraineeHome = () => {
                         });
                     } else {
                         console.log('Server error data not found, please contact to Admin');
-                    }
-                }).catch(e => {
-                    console.log(e);
-                })
-            } else if (val === "departmentFormData") {
-                console.log('fetch data from DB department Form');
-                getDepartmentFormDetails().then(res => {
-                    if (res.status === 200) {
-                        localStore("departmentFormData", res.data, () => {
-                            setDepartmentFormData(res.data);
-                        });
-                    } else {
-                        console.log('Server error data Not found, please contact to Admin');
                     }
                 }).catch(e => {
                     console.log(e);

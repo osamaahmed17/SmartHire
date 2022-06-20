@@ -16,7 +16,7 @@ import AlumniIndex from './trainee/alumni/AlumniIndex';
 import InterviewExp from './trainee/interviewexp/InterviewExp';
 import HumanResourceManagement from './trainee/programguide/HumanResourceManagemnt';
 import Manufacturing from './trainee/programguide/Manufacturing';
-import Home from './home/HomeScreen';
+import AdminLogin from './home/AdminLogin';
 import ChangePassword from './trainee/profile/ChangePassword';
 import Index from './mainApp/Index';
 
@@ -27,7 +27,7 @@ const Routes = () => {
             <Router>
                 <Switch>
                     <Route path="/" exact component={Index}></Route>
-                    <Route path="/Admin" exact component={Home}></Route>
+                    <Route path="/Admin" exact component={AdminLogin}></Route>
                     <Route path="/TraineeLogin" exact component={TraineeLogin}></Route>
                     <PrivateRoute path="/TraineeHome" exact component={TraineeHome} />
                     <PrivateRoute path="/ProgramGuide" exact component={ProgramGuide} />
