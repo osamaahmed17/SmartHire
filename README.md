@@ -11,7 +11,7 @@ https://smarthire.herokuapp.com/
 ```
 
 ### To access the Postman collection:
-Make sure that you install postman from this [link](https://www.postman.com/downloads/) first 
+Make sure that you install Postman from this [link](https://www.postman.com/downloads/) first 
 ```sh
 https://www.getpostman.com/collections/ad52afab7b3be9946b78
 ```
