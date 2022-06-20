@@ -12,8 +12,8 @@ import ProgramGuide from './trainee/programguide/ProgramGuide';
 import PrivateRoute from './auth/helper/privateroute/PrivateRoute';
 import EditProfile from './trainee/profile/EditProfile';
 import Profile from './trainee/profile/Profile';
-import AlumniIndex from './trainee/alumni/AlumniIndex';
-import InterviewExp from './trainee/interviewexp/InterviewExp';
+import Alumni from './trainee/Alumni';
+import InterviewExp from './trainee/InterviewExp';
 import HumanResourceManagement from './trainee/programguide/HumanResourceManagemnt';
 import Manufacturing from './trainee/programguide/Manufacturing';
 import AdminLogin from './home/AdminLogin';
@@ -34,7 +34,7 @@ const Routes = () => {
                     <PrivateRoute path="/Profile" exact component={Profile} />
                     <PrivateRoute path="/EditProfile" exact component={EditProfile} />
                     <PrivateRoute path="/ChangePassword" exact component={ChangePassword} />
-                    <PrivateRoute path="/TraineeAlumni" exact component={AlumniIndex} />
+                    <PrivateRoute path="/TraineeAlumni" exact component={Alumni} />
                     <PrivateRoute path="/InterviewExperience" exact component={InterviewExp} />
                     <PrivateRoute path="/HumanResourceManagement" exact component={HumanResourceManagement} />
                     <PrivateRoute path="/Manufacturing" exact component={Manufacturing} />

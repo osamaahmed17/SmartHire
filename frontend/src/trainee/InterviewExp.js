@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import Base from '../Base';
-import { getlocalstore } from '../../auth/helper';
-import { AddInterviewExp } from '../../auth/traineehelper/TraineeIndex';
+import Base from './Base';
+import { getlocalstore } from '../auth/helper';
+import { AddInterviewExp } from '../auth/traineehelper/TraineeIndex';
 
 const InterviewExp = () => {
 

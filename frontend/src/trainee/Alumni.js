@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import Base from '../Base';
-import { AlumniData } from '../../auth/traineehelper/TraineeIndex';
-import '../css/TraineeDashBoard.css';
+import Base from './Base';
+import { AlumniData } from '../auth/traineehelper/TraineeIndex';
+import './css/TraineeDashBoard.css';
 
 const AlumniIndex = () => {
 
