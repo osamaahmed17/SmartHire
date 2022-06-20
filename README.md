@@ -30,13 +30,13 @@ cd frontend && npm install
 Make sure that you add .env file with username and password from Zohomail while following this [link](https://www.finetricks.com/send-email-with-zoho-and-nodemailer-in-node-js/)
 
 
-### To run the Backend on localhost
+### To run Backend on localhost
 Make sure that the packages are installed and .env file configured before running the application on localhost.
 ```sh
 npm start
 ```
 
-### To run the Frontend  on localhost
+### To run Frontend  on localhost
 Make sure that the backend is running and on the on another command prompt, run the following commands from the application location.
 ```sh
 cd frontend && npm start
