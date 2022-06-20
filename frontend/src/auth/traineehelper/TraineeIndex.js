@@ -9,8 +9,6 @@ import axios from 'axios'
  * Trainee SignUp API 
 *******************************/
 export const TraineeSignUp = Trainee => {
-
-
     return axios.post(`${API}rest/api/v1/traineesignup`, Trainee)
         .then(function (res) {
             console.log(res)
@@ -21,6 +19,7 @@ export const TraineeSignUp = Trainee => {
         });
 
 }
+
 /** **************************
  * Trainee Login or SignIn API 
 *******************************/
@@ -29,10 +28,11 @@ export const TraineeSignIn = Trainee => {
     return axios.post(`${API}rest/api/v1/traineelogin`, Trainee)
         .then(function (res) {
             return res;
-        })
-        
-
+        }) .catch(function (error) {
+            console.log(error);
+        });
 }
+
 /** **************************
  * Trainee Login or SignIn API 
 *******************************/
@@ -49,6 +49,7 @@ export const sendOTPOnmail = Trainee => {
 
 
 }
+
 /** **************************
  * Trainee forgot Password API 
 *******************************/
@@ -61,17 +62,18 @@ export const forgotpassword = Trainee => {
             console.log(error);
         });
 }
+
 /** **************************
  * Update Trainee Profile API 
 *******************************/
 export const updateProfile = Trainee => {
     return axios.put(`${API}rest/api/v1/updateprofile`, Trainee)
-    .then(function (res) {
-        return res;
-    })
-    .catch(function (error) {
-        console.log(error);
-    });
+        .then(function (res) {
+            return res;
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
 }
 
 /** **************************
@@ -97,19 +99,20 @@ export const TraineeLogout = () => {
         localStorage.clear();
     }
 }
- /** **************************
+
+/** **************************
   * Alumni Data API 
- *******************************/
- export const AlumniData = (val) => {
+*******************************/
+export const AlumniData = (val) => {
     return axios.get(`${API}rest/api/v1/alumni/${val}`)
-    .then(function (res) {
-        console.log(res)
-        return res;
-    })
-    .catch(function (error) {
-        console.log(error);
-    });
- }
+        .then(function (res) {
+            console.log(res)
+            return res;
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+}
 
 /** **************************
  * Add Interview Exp 
@@ -117,22 +120,23 @@ export const TraineeLogout = () => {
 export const AddInterviewExp = (values) => {
 
     return axios.post(`${API}rest/api/v1/experience`, values)
-    .then(function (res) {
-        return res;
-    })
-    .catch(function (error) {
-        console.log(error);
-    });
+        .then(function (res) {
+            return res;
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
 }
+
 /** **************************
  * Get Interview Exp Details 
 *******************************/
 export const GetInterviewExpDetails = () => {
     return axios.get(`${API}rest/api/v1/experience`)
-    .then(function (res) {
-        return res;
-    })
-    .catch(function (error) {
-        console.log(error);
-    });
+        .then(function (res) {
+            return res;
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
 }

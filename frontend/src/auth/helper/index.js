@@ -5,10 +5,8 @@ import { API } from '../../Backend'
 import axios from 'axios'
 
 /** **************************
- * Admin Login API 
+ * Trainee Sign Up
 *******************************/
-
-
 export const TraineeSignUp = Trainee => {
     return axios.post(`${API}rest/api/v1/traineesignup`, Trainee)
         .then(function (res) {
@@ -21,7 +19,9 @@ export const TraineeSignUp = Trainee => {
 
 }
 
-
+/** **************************
+ * Admin Login API 
+*******************************/
 export const adminLogin = admin => {
 
     return axios.post(`${API}rest/api/v1/login`, admin)
@@ -47,8 +47,6 @@ export const adminLogout = () => {
 /** ************************************
  * Add Department Details API
 ****************************************/
-
-
 export const addDepartmentDetails = details => {
     return axios.post(`${API}rest/api/v1/department`, details)
         .then(function (res) {
@@ -59,7 +57,6 @@ export const addDepartmentDetails = details => {
             console.log(error);
         });
 }
-
 
 
 /** ***************************************
@@ -78,7 +75,6 @@ export const getDepartmentDetails = () => {
 /*******************************************
  * Delete Department Details API
 ********************************************/
-
 export const deleteDepartmentDetail  = (id, next) => (event) => {
     return axios.delete(`${API}rest/api/v1/department/` + id)
     .then((res) => {
@@ -90,18 +86,19 @@ export const deleteDepartmentDetail  = (id, next) => (event) => {
     })
 }
 
-/** ---------------------------------------
+/** ***************************************
  * Store Data in localstorage
- ------------------------------------------*/
+******************************************/
 export const localStore = (val, data, next) => {
     if (typeof window !== undefined) {
         localStorage.setItem(val, JSON.stringify(data));
         next();
     }
 }
-/**
+
+/** ***************************************
  * Get Data from Local Storage
- */
+******************************************/
 export const getlocalstore = (val) => {
     let datapartmentData = []
     if (typeof window !== undefined) {
@@ -112,9 +109,9 @@ export const getlocalstore = (val) => {
     return datapartmentData;
 }
 
-/**
+/** ***************************************
  * Dashboard count
- */
+ ******************************************/
 export const dataStoreLocal = (val) => {
     console.log(localStorage.getItem(val))
     if (typeof window !== undefined) {
@@ -140,32 +137,6 @@ export const getTraineeDetails = () => {
     
 }
 
-/**********************************************
- * Add Department Form Details by Admin
- ***********************************************/
-export const add_department_form_details = Formdetails => {
-    return axios.post(`${API}rest/api/v1/departmentform`, Formdetails)
-    .then(function (res) {
-        console.log(res)
-        return res;
-    })
-    .catch(function (error) {
-        console.log(error);
-    });
-}
-/** ***************************************
- * Get Department Form Details API 
-******************************************/
-export const getDepartmentFormDetails = () => {
-    return axios.get(`${API}rest/api/v1/departmentform`)
-    .then(function (res) {
-        console.log(res)
-        return res;
-    })
-    .catch(function (error) {
-        console.log(error);
-    });
-}
 /** **************************
  * Admin Auth API 
 *******************************/
