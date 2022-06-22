@@ -4,7 +4,7 @@ const otpGenerator = require('otp-generator');
 
 const sendOTP = function (email, response) {
     const nodemailer = require('nodemailer');
-    console.log(process.env.user)
+    console.log(process.env.username)
     var transporter = nodemailer.createTransport({
         host: "smtp.zoho.com",
         secure: true,
@@ -60,6 +60,8 @@ class authenticationController {
     async verifyEmail(req, res) {
         const responseClass = new authenticationController();
         const condition = req.body.condition;
+        console.log(req.body.email)
+        console.log(req.body.condition)
         traineeModel.findOne({ 'email': req.body.email }, function (error, present) {
             if (error) {
                 responseClass.errorResponse.error = error
@@ -71,6 +73,7 @@ class authenticationController {
                     return res.status(500).send(responseClass.errorResponse)
                 }
                 else {
+                    console.log("Hi")
                     sendOTP(req.body.email, res);
                 }
             } else if (condition === 'forgotpassword') {

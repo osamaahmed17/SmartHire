@@ -25,7 +25,7 @@ const dashboard = () => {
                                         <div className="row">
                                             <div className="col">
                                                 <h4 className="card-title text-uppercase text-muted mb-0">Total Departments</h4>
-                                                <span className="h2 font-weight-bold mb-0">12</span>
+                                                <span className="h2 font-weight-bold mb-0">2</span>
                                             </div>
                                             <div className="col-auto">
                                                 <div
@@ -43,7 +43,7 @@ const dashboard = () => {
                                         <div className="row">
                                             <div className="col">
                                                 <h4 className="card-title text-uppercase text-muted mb-0">Total Trainee</h4>
-                                                <span className="h2 font-weight-bold mb-0">10</span>
+                                                <span className="h2 font-weight-bold mb-0">1</span>
                                             </div>
                                             <div className="col-auto">
                                                 <div
@@ -61,7 +61,7 @@ const dashboard = () => {
                                         <div className="row">
                                             <div className="col">
                                                 <h4 className="card-title text-uppercase text-muted mb-0">Total Alumni</h4>
-                                                <span className="h2 font-weight-bold mb-0">4</span>
+                                                <span className="h2 font-weight-bold mb-0">5</span>
                                             </div>
                                             <div className="col-auto">
                                                 <div

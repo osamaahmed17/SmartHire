@@ -53,26 +53,29 @@ const TraineeHome = () => {
 
     const getIndividualDepartment = (val) => () => {
         setvalues({ ...values, Cform: true })
-        departmentData.data.forEach((data, index) => {
-            if (data._id === val) {
-                setindividualData(data);
-            }
-        })
+        if (departmentData.data) {
+            departmentData.data.forEach((data, index) => {
+                if (data._id === val) {
+                    setindividualData(data);
+                }
+            })
+        }
+
     }
 
     const Departmentregistrationform = (val) => {
         if (Cform === true) {
             var condi = false;
             var link_val = "";
-            departmentFormData.data.forEach((data, i) => {
+            if (departmentFormData.data) {
+                departmentFormData.data.forEach((data, i) => {
+                    if (data.department_name === val) {
+                        condi = true;
+                        link_val = data.department_google_link;
+                    }
 
-
-                if (data.department_name === val) {
-                    condi = true;
-                    link_val = data.department_google_link;
-                }
-
-            })
+                })
+            }
             if (condi === true) {
                 return (
                     <a href={link_val} className="btn btn-success" target="blank">Registration form</a>
@@ -152,12 +155,12 @@ const TraineeHome = () => {
 
                                         <button className="col-md-4 col-sm-6 mt-3" data-toggle="modal" data-target="#DepartmentModel" key={index} onClick={getIndividualDepartment(data._id)}>
 
-                                           
-                                            <div className="card text-white bg-success" style={{"maxWidth": "30rem"}}>
-                                            <div className="card-header" style={{color:"black"}}>
-                                                
-                                               <h5>{data.factory}</h5> 
-                                            </div>
+
+                                            <div className="card text-white bg-success" style={{ "maxWidth": "30rem" }}>
+                                                <div className="card-header" style={{ color: "black" }}>
+
+                                                    <h5>{data.factory}</h5>
+                                                </div>
                                                 <div className="card-body">
                                                     <h5 className="card-title">{data.name}</h5>
                                                     <h6 className="card-text">{data.field}</h6>

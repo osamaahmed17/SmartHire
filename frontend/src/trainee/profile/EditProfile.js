@@ -75,14 +75,14 @@ const EditProfile = () => {
             alert('please enter Trainee ID');
         } else if (department === "") {
             alert('please enter Department');
-        } else if (contactNumber  === "") {
+        } else if (contactNumber === "") {
             alert('please enter valid mobile number');
         } else {
             setEditStudent({ ...editStudent, loading: true })
             updateProfile({ email, name, traineeID, department, contactNumber })
                 .then(data => {
                     if (data.data.success === true) {
-                        localStore("trainee", data.data , () => {
+                        localStore("trainee", data.data, () => {
                             setEditStudent({ ...editStudent, loading: false, redirect: true })
                         })
                     } else {
@@ -135,10 +135,10 @@ const EditProfile = () => {
                                                 </div>
                                             </div>
 
-                                        
+
                                         </div>
                                         <div className="row">
-                                        <div className="col-6">
+                                            <div className="col-6">
                                                 <div className="wrap-input100 validate-input m-b-15">
                                                     <span className="label-input100"> Trainee ID<span className="asteriskField">*</span></span>
                                                     <input className="input100" type="text" placeholder="Please Enter New Trainee ID" value={traineeID} onChange={handleChange("traineeID")} />
@@ -151,8 +151,8 @@ const EditProfile = () => {
                                                     <span className="label-input100">Department<span className="asteriskField">*</span></span>
                                                     <select className="select_input100" value={department} onChange={handleChange("department")}>
                                                         <option disabled>***select option***</option>
+                                                        <option>Human Resource</option>
                                                         <option>Information Technology</option>
-                                                        <option>Human Resource Management</option>
                                                         <option>Manufacturing</option>
                                                         <option>Machineries</option>
                                                     </select>
@@ -168,7 +168,7 @@ const EditProfile = () => {
                                                     <span className="focus-input100" data-symbol="&#xf206;"></span>
                                                 </div>
                                             </div>
-                                       
+
                                         </div>
                                         <button className="btn btn-md btn-primary mt-2" onClick={OnSubmit}>Submit</button>
                                     </div>
